@@ -1,7 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
 import Link from './Link'
+import Image from 'next/image'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
@@ -15,11 +15,11 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="mr-3">
-                  <Logo />
+                <div className="mr-3 -mb-3">
+                  <Image width={50} height={50} src="https://res.cloudinary.com/dyfa5afhe/image/upload/v1683738562/20230508_214741_0000-removebg-preview_eiophz.png"/>
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
+                  <div className="h-6 text-2xl font-semibold sm:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
