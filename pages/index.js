@@ -22,7 +22,7 @@ export default function Home({ posts }) {
       <div className="relative divide-y divide-gray-200 dark:divide-gray-700">
         <div>
 
-		 <div·className="mx-auto max-w-6xl px-2 sm:px-2">
+		 <div className="mx-auto max-w-6xl px-2 sm:px-2">
 		  
          <div className="pt-10 pb-10 md:pt-10 md:pb-10">
 		   
