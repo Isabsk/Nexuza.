@@ -29,7 +29,7 @@ const LayoutWrapper = ({ children }) => {
                   </div>
                 ) : (
                   siteMetadata.headerTitle
-                )}<div class="h-2 w-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full -mb-4 ml-0.5"></div>
+                )}<span className="bg-clip-text text-6xl -mt-5 text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">.</span>
               </div> 
             </Link>
           </div>

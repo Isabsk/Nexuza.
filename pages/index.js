@@ -19,15 +19,35 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+      <div className="divide-y divide-gray-200 dark:divide-gray-700 relative">
+       <section>
+
+		 <div className="max-w-6xl mx-auto px-2 sm:px-2">
+		  <div className="pt-10 pb-10 md:pt-10 md:pb-10">
+		   <div className="text-center pb-12 md:pb-16">
+		               <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter mb-4" data-aos="zoom-y-out">A <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">Creative</span> Blog Site for Developers <span class="h-2 w-2 bg-cyan-400 rounded-full -mb-4 ml-0.5"></span></h1>
+		               <div className="max-w-3xl mx-auto">
+		                 <p className="text-xl text-gray-600 mb-8 dark:text-gray-100" data-aos="zoom-y-out" data-aos-delay="150">Here you can read numerous blog articles related to web development, which can guide you to code.</p>
+		                 <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
+<div>
+
+		                   </div>
+		            
+		      
+		         </div>
+		    </div>
+		 </div>
+		   <div>
+		
+		 </div>
+		               
+		                       </div>
+		               <h1 className="text-3xl mb-4 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl md:text-4xl">
+            Latest Posts
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-        </div>
+		                     </div>
+		                   </section>             
+		
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
