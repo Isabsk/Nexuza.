@@ -19,14 +19,25 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700 relative">
-       <section>
+      <div className="relative divide-y divide-gray-200 dark:divide-gray-700">
+        <div>
 
-		 <div className="max-w-6xl mx-auto px-2 sm:px-2">
-		  <div className="pt-10 pb-10 md:pt-10 md:pb-10">
-		   <div className="text-center pb-12 md:pb-16">
-		               <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter mb-4" data-aos="zoom-y-out">A <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">Creative</span> Blog Site for Developers <span class="h-2 w-2 bg-cyan-400 rounded-full -mb-4 ml-0.5"></span></h1>
-		               <div className="max-w-3xl mx-auto">
+		 <div·className="mx-auto max-w-6xl px-2 sm:px-2">
+		  
+         <div className="pt-10 pb-10 md:pt-10 md:pb-10">
+		   
+         <div className="pb-12 text-center md:pb-16">
+		               <h1 
+                       className="mb-4 text-5xl font-extrabold leading-tight tracking-tighter md:text-6xl" 
+                       data-aos="zoom-y-out"
+                       >
+                       A {" "}
+                       <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                       Creative
+                       </span> {" "}
+                       Blog Site for Developers {" "}
+                       <span class="-mb-4 ml-0.5 h-2 w-2 rounded-full bg-cyan-400"></span></h1>
+		               <div className="mx-auto max-w-3xl">
 		                 <p className="text-xl text-gray-600 mb-8 dark:text-gray-100" data-aos="zoom-y-out" data-aos-delay="150">Here you can read numerous blog articles related to web development, which can guide you to code.</p>
 		                 <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
 <div>
@@ -46,7 +57,7 @@ export default function Home({ posts }) {
             Latest Posts
           </h1>
 		                     </div>
-		                   </section>             
+		                   </div>             
 		
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
