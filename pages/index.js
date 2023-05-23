@@ -37,12 +37,11 @@ export default function Home({ posts }) {
                        </h1>
 		               <div className="mx-auto max-w-3xl">
 		                 <p className="text-xl text-gray-600 mb-8 dark:text-gray-100" data-aos="zoom-y-out" data-aos-delay="150">Here you can read numerous blog articles related to web development, which can guide you to code.</p>
-		                   <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300"><div>
-                       </div>
-		            </div>
+	                   </div>
 		         </div>
 		       </div>
 		    </div>
+	
 		    <h1 className="text-3xl mb-4 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl md:text-4xl">
             Latest Posts
            </h1>
@@ -116,6 +115,7 @@ export default function Home({ posts }) {
           <NewsletterForm />
         </div>
       )}
+      </div>
     </>
   )
 }
