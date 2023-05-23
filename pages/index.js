@@ -21,18 +21,17 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="relative divide-y divide-gray-200 dark:divide-gray-700">
         <div>
+        
            <div className="mx-auto max-w-6xl px-2 sm:px-2">
 		     <div className="pt-10 pb-10 md:pt-10 md:pb-10">
 		       <div className="pb-12 text-center md:pb-16">
-		               <h1 
-                       className="mb-4 text-5xl font-extrabold leading-tight tracking-tighter md:text-6xl" 
-                       data-aos="zoom-y-out"
-                       >
-                       A {" "}
+		               <h1 className="mb-4 text-5xl font-extrabold leading-tight tracking-tighter md:text-6xl" 
+                       data-aos="zoom-y-out">
+                       A{" "}
                        <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                        Creative
-                       </span> {" "}
-                       Blog Site for Developers {" "}
+                       </span>{" "}
+                       Blog Site for Developers{" "}
                        <span class="-mb-4 ml-0.5 h-2 w-2 rounded-full bg-cyan-400"></span>
                        </h1>
 		               <div className="mx-auto max-w-3xl">
