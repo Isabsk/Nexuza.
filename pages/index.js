@@ -21,12 +21,9 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="relative divide-y divide-gray-200 dark:divide-gray-700">
         <div>
-
-		 <div className="mx-auto max-w-6xl px-2 sm:px-2">
-		  
-         <div className="pt-10 pb-10 md:pt-10 md:pb-10">
-		   
-         <div className="pb-12 text-center md:pb-16">
+           <div className="mx-auto max-w-6xl px-2 sm:px-2">
+		     <div className="pt-10 pb-10 md:pt-10 md:pb-10">
+		       <div className="pb-12 text-center md:pb-16">
 		               <h1 
                        className="mb-4 text-5xl font-extrabold leading-tight tracking-tighter md:text-6xl" 
                        data-aos="zoom-y-out"
@@ -36,28 +33,21 @@ export default function Home({ posts }) {
                        Creative
                        </span> {" "}
                        Blog Site for Developers {" "}
-                       <span class="-mb-4 ml-0.5 h-2 w-2 rounded-full bg-cyan-400"></span></h1>
+                       <span class="-mb-4 ml-0.5 h-2 w-2 rounded-full bg-cyan-400"></span>
+                       </h1>
 		               <div className="mx-auto max-w-3xl">
 		                 <p className="text-xl text-gray-600 mb-8 dark:text-gray-100" data-aos="zoom-y-out" data-aos-delay="150">Here you can read numerous blog articles related to web development, which can guide you to code.</p>
-		                 <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
-<div>
-
-		                   </div>
-		            
-		      
+		                   <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300"><div>
+                       </div>
+		            </div>
 		         </div>
+		       </div>
 		    </div>
-		 </div>
-		   <div>
-		
-		 </div>
-		               
-		                       </div>
-		               <h1 className="text-3xl mb-4 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl md:text-4xl">
+		    <h1 className="text-3xl mb-4 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl md:text-4xl">
             Latest Posts
-          </h1>
-		                     </div>
-		                   </div>             
+           </h1>
+		 </div>
+       </div>             
 		
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
