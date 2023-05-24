@@ -151,7 +151,7 @@ export default function Home({
                         `/blog/${slug}`
                     }
                     className = "text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                    aria - label = {
+                    aria-label = {
                         `Read "${title}"`
                     } >
                     Read more & rarr; <
@@ -171,7 +171,7 @@ export default function Home({
                 <
                 Link href = "/blog"
                 className = "text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                aria - label = "all posts" >
+                aria-label = "all posts" >
                 All Posts & rarr; <
                 /Link> < /
                 div >
