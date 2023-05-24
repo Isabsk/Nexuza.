@@ -48,7 +48,7 @@ export default function Home({
         div className = "pb-12 text-center md:pb-16" >
         <
         h1 className = "mb-4 text-5xl font-extrabold leading-tight tracking-tighter md:text-6xl"
-        data - aos = "zoom-y-out" >
+        data-aos = "zoom-y-out" >
         A {
             " "
         } <
@@ -64,8 +64,8 @@ export default function Home({
         div className = "mx-auto max-w-3xl" >
         <
         p className = "text-xl text-gray-600 mb-8 dark:text-gray-100"
-        data - aos = "zoom-y-out"
-        data - aos - delay = "150" > Here you can read numerous blog articles related to web development, which can guide you to code. < /p> < /
+        data-aos = "zoom-y-out"
+        data-aos-delay = "150" > Here you can read numerous blog articles related to web development, which can guide you to code. < /p> < /
         div > <
         /div> < /
         div > <
