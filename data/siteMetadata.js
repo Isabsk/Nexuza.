@@ -13,7 +13,8 @@ const siteMetadata = {
   email: 'contact@imagiweb.tech',
   github: 'https://github.com/isabsk',
   twitter: 'https://twitter.com/',
-  facebook: 'https://www.facebook.com/profile.php?id=100085022616586&mibextid=ZbWKwL',
+  facebook:
+    'https://www.facebook.com/profile.php?id=100085022616586&mibextid=ZbWKwL',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com',
   locale: 'en-US',

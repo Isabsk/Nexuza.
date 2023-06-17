@@ -144,7 +144,7 @@ module.exports = {
             'ul li::marker': {
               backgroundColor: theme('colors.gray.400'),
             },
-           
+
             strong: { color: theme('colors.gray.100') },
             thead: {
               th: {
