@@ -10,28 +10,24 @@ import ThemeSwitch from './ThemeSwitch'
 const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
+      <div className="flex h-screen flex-col justify-between -mt-3 md:mt-0">
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="-mb-3 mr-1.5">
+                <div className="-mb-4 mr-1.5">
                   <Image
-                    width={50}
-                    height={50}
-                    src="https://res.cloudinary.com/dyfa5afhe/image/upload/v1683738562/20230508_214741_0000-removebg-preview_eiophz.png"
+                    width={35}
+                    height={35}
+                    src="/static/images/logo.png"
                     alt="logo"
                   />
                 </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="h-6 text-2xl font-extrabold sm:block">
-                    {siteMetadata.headerTitle}
+                <div className="h-6 text-2xl font-extrabold">
+                    Imagi
                   </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
-                <span className="-mt-5 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-6xl text-transparent">
-                  .
+                <span className="-mb-2 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-2xl font-extrabold text-transparent">
+                  Web.
                 </span>
               </div>
             </Link>
