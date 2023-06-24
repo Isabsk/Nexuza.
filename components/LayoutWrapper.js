@@ -10,7 +10,7 @@ import ThemeSwitch from './ThemeSwitch'
 const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between -mt-3 md:mt-0">
+      <div className="-mt-3 flex h-screen flex-col justify-between md:mt-0">
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -23,9 +23,7 @@ const LayoutWrapper = ({ children }) => {
                     alt="logo"
                   />
                 </div>
-                <div className="h-6 text-2xl font-extrabold">
-                    Imagi
-                  </div>
+                <div className="h-6 text-2xl font-extrabold">Imagi</div>
                 <span className="-mb-2 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-2xl font-extrabold text-transparent">
                   Web.
                 </span>

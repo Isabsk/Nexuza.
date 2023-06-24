@@ -45,15 +45,15 @@ export default function PostLayout({
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                <div className="w-full relative mb-5 pt-[60%]">
-                        <Image
-                          src={thumbnail}
-                          alt="profile"
-                          objectFit="cover"
-                          layout='fill'
-                          className="w-full h-full top-0 left-0 object-cover rounded-2xl"
-                        />
-                </div>
+                  <div className="relative mb-5 w-full pt-[60%]">
+                    <Image
+                      src={thumbnail}
+                      alt="profile"
+                      objectFit="cover"
+                      layout="fill"
+                      className="left-0 top-0 h-full w-full rounded-2xl object-cover"
+                    />
+                  </div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>

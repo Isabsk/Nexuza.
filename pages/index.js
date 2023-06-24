@@ -61,7 +61,7 @@ export default function Home({ posts }) {
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl md:text-6xl">
             Latest Posts{' '}
           </h1>
-          <div className="mt-1 mb-4 w-20 h-1 md:h-2 md:w-30 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
+          <div className="md:w-30 mb-4 mt-1 h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-400 md:h-2"></div>
           <ul className="divide-y divide-gray-200 dark:divide-gray-700">
             {' '}
             {!posts.length && 'No posts found.'}{' '}
