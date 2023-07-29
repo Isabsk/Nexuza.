@@ -1,3 +1,4 @@
+import Image from '@/components/Image'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
@@ -19,7 +20,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, authorDetails }) {
   return (
     <>
       <PageSEO
@@ -39,20 +40,21 @@ export default function Home({ posts }) {
                   <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                     Creative{' '}
                   </span>{' '}
-                  Blog Site for Developers{' '}
+                  Blog Site <br /> for Developers{' '}
                   <span className="-mb-4 ml-0.5 h-2 w-2 rounded-full bg-cyan-400">
                     {' '}
                   </span>{' '}
                 </h1>{' '}
                 <div className="mx-auto max-w-3xl">
                   <p
-                    className="mb-8 text-xl text-gray-600 dark:text-gray-100"
+                    className="mb-8 text-xl font-light text-gray-600 dark:text-gray-100"
                     data-aos="zoom-y-out"
                     data-aos-delay="150"
                   >
                     {' '}
                     Here you can read numerous blog articles related to web
-                    development, which can guide you to code.{' '}
+                    development, <br />
+                    which can guide you to code.{' '}
                   </p>{' '}
                 </div>{' '}
               </div>{' '}
@@ -62,61 +64,102 @@ export default function Home({ posts }) {
             Latest Posts{' '}
           </h1>
           <div className="md:w-30 mb-4 mt-1 h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-400 md:h-2"></div>
-          <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-            {' '}
-            {!posts.length && 'No posts found.'}{' '}
-            {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-              const { slug, date, title, summary, tags } = frontMatter
-              return (
-                <li key={slug} className="py-12">
-                  <article>
-                    <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only"> Published on </dt>{' '}
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}> {formatDate(date)} </time>{' '}
-                        </dd>{' '}
-                      </dl>{' '}
-                      <div className="space-y-5 xl:col-span-3">
-                        <div className="space-y-6">
-                          <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                              <Link
-                                href={`/blog/${slug}`}
-                                className="text-gray-900 dark:text-gray-100"
-                              >
-                                {' '}
-                                {title}{' '}
-                              </Link>{' '}
-                            </h2>{' '}
-                            <div className="flex flex-wrap">
-                              {' '}
-                              {tags.map((tag) => (
-                                <Tag key={tag} text={tag} />
-                              ))}{' '}
-                            </div>{' '}
-                          </div>{' '}
-                          <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                            {' '}
-                            {summary}{' '}
-                          </div>{' '}
-                        </div>{' '}
-                        <div className="text-base font-medium leading-6">
-                          <Link
-                            href={`/blog/${slug}`}
-                            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                            aria-label={`Read "${title}"`}
+          <section class="body-font overflow-hidden text-gray-600">
+            <div class="container mx-auto px-5 py-24">
+              <ul class="-m-12 flex flex-wrap">
+                {' '}
+                {!posts.length && 'No posts found.'}{' '}
+                {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
+                  const {
+                    slug,
+                    date,
+                    title,
+                    summary,
+                    tags,
+                    author,
+                    avatar,
+                    thumbnail,
+                  } = frontMatter
+                  return (
+                    <li
+                      key={slug}
+                      class="flex flex-col items-start p-12 md:w-1/2"
+                    >
+                      <div className="relative mb-5 w-full pt-[60%]">
+                        <Image
+                          src={thumbnail}
+                          alt="profile"
+                          objectFit="cover"
+                          layout="fill"
+                          className="left-0 top-0 h-full w-full rounded-2xl object-cover"
+                        />
+                      </div>
+                      <div className="flex flex-wrap">
+                        {tags.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}{' '}
+                      </div>
+                      <Link href={`/blog/${slug}`}>
+                        <h2 class="title-font mb-4 mt-4 text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                          {title}
+                        </h2>
+                      </Link>
+                      <p class="mb-8 font-light leading-relaxed">{summary}</p>
+                      <div class="mb-4 mt-auto flex w-full flex-wrap items-center border-b-2 border-gray-100 pb-4">
+                        <Link href={`/blog/${slug}`}>
+                          <a class="inline-flex items-center text-cyan-500">
+                            Learn More
+                            <svg
+                              class="ml-2 h-4 w-4"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M5 12h14"></path>
+                              <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                        </Link>
+                        <span class="ml-auto mr-3 inline-flex items-center border-r-2 border-gray-200 py-1 pr-3 text-[12px] leading-none text-gray-400">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-calendar-event-fill"
+                            viewBox="0 0 16 16"
                           >
-                            Read more & rarr;{' '}
-                          </Link>{' '}
-                        </div>{' '}
-                      </div>{' '}
-                    </div>{' '}
-                  </article>{' '}
-                </li>
-              )
-            })}{' '}
-          </ul>{' '}
+                            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
+                          </svg>
+                        </span>
+                        <span class="inline-flex items-center text-[12px] leading-none text-gray-400">
+                          <time dateTime={date}> {formatDate(date)} </time>
+                        </span>
+                      </div>
+                      <a class="inline-flex items-center">
+                        <Image
+                          alt="blog"
+                          src={avatar}
+                          height="45"
+                          width="45"
+                          class="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
+                        />
+                        <span class="flex flex-grow flex-col pl-4">
+                          <span class="title-font text-md font-medium text-gray-900">
+                            {author}
+                          </span>
+                          <p class="text-sm text-gray-500">Developer</p>
+                        </span>
+                      </a>
+                    </li>
+                  )
+                })}{' '}
+              </ul>{' '}
+            </div>
+          </section>
         </div>{' '}
         {posts.length > MAX_DISPLAY && (
           <div className="flex justify-end text-base font-medium leading-6">
