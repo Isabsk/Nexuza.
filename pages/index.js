@@ -104,7 +104,9 @@ export default function Home({ posts, authorDetails }) {
                           {title}
                         </h2>
                       </Link>
-                      <p className="mb-8 font-light leading-relaxed">{summary}</p>
+                      <p className="mb-8 font-light leading-relaxed">
+                        {summary}
+                      </p>
                       <div className="mb-4 mt-auto flex w-full flex-wrap items-center border-b-2 border-gray-100 pb-4">
                         <Link href={`/blog/${slug}`}>
                           <a className="inline-flex items-center text-cyan-500">
