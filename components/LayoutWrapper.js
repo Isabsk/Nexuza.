@@ -16,18 +16,23 @@ const LayoutWrapper = ({ children }) => {
             <div>
               <Link href="/" aria-label={siteMetadata.headerTitle}>
                 <div className="flex items-center justify-between">
-                  <div className="-mb-4 mr-1.5">
+                  <div className="relative mb-2 mr-1.5 block dark:hidden">
                     <Image
-                      width={35}
-                      height={35}
-                      src="/static/images/logo.png"
+                      width={165}
+                      height={55}
+                      src="/static/images/logo.svg"
                       alt="logo"
                     />
                   </div>
-                  <div className="h-6 text-2xl font-extrabold">Imagi</div>
-                  <span className="-mb-2 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-2xl font-extrabold text-transparent">
-                    Web.
-                  </span>
+                  <div className="relative mb-2 mr-1.5 hidden dark:block">
+                    <Image
+                      width={165}
+                      height={55}
+                      src="/static/images/logo-dark.svg"
+                      alt="logo"
+                    />
+                  </div>
+                  <div className="h-6 text-2xl font-extrabold"></div>
                 </div>
               </Link>
             </div>

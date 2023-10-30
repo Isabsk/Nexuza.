@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
-import Image from '@/components/Image'
+
+import Image from 'next/image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
@@ -57,7 +58,6 @@ export default function ListLayout({
           </div>
         </div>
 
-        <div className="md:w-30 mb-4 mt-1 h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-400 md:h-2"></div>
         <section className="body-font overflow-hidden text-gray-600">
           <div className="container mx-auto px-5 py-24">
             <ul className="-m-12 flex flex-wrap">

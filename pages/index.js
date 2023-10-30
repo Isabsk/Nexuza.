@@ -28,39 +28,40 @@ export default function Home({ posts, authorDetails }) {
         description={siteMetadata.description}
       />{' '}
       <div className="relative">
-        <div>
-          <div className="mx-auto max-w-6xl px-2 sm:px-2">
-            <div className="pb-10 pt-10 md:pb-10 md:pt-10">
+        <div className="">
+          <div className="mx-auto max-w-6xl bg-transparent bg-cover bg-center px-2 sm:px-2 md:bg-[url('/static/images/hero-bg-0.svg')]">
+            <div className="pb-10 pt-10 md:pb-5 md:pt-5 ">
               <div className="pb-12 text-center md:pb-16">
                 <h1
-                  className="mb-4 text-5xl font-extrabold leading-tight tracking-tighter md:text-6xl"
+                  className="mb-4 text-[45px] font-extrabold leading-tight tracking-tighter md:text-5xl"
                   data-aos="zoom-y-out"
                 >
-                  A{' '}
+                  Expand your coding universe with
                   <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                    Creative{' '}
+                    &nbsp;Nexuza
                   </span>{' '}
-                  Blog Site <br /> for Developers{' '}
                   <span className="-mb-4 ml-0.5 h-2 w-2 rounded-full bg-cyan-400">
                     {' '}
                   </span>{' '}
                 </h1>{' '}
                 <div className="mx-auto max-w-3xl">
                   <p
-                    className="mb-8 text-xl font-light text-gray-600 dark:text-gray-100"
+                    className="mb-8 text-[16px] font-light text-gray-600 dark:text-gray-100"
                     data-aos="zoom-y-out"
                     data-aos-delay="150"
                   >
                     {' '}
-                    Here you can read numerous blog articles related to web
-                    development, <br />
-                    which can guide you to code.{' '}
+                    Nexuza is the ultimate creative blog site for developers,
+                    offering a plethora of programming and coding content.
+                    Explore the fascinating intersection of astronomy and coding
+                    to take your skills to new heights.{' '}
                   </p>{' '}
                 </div>{' '}
               </div>{' '}
             </div>{' '}
           </div>
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl md:text-6xl">
+
+          <h1 className="mb-4 mt-2 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl md:text-6xl">
             Latest Posts{' '}
           </h1>
           <div className="md:w-30 mb-4 mt-1 h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-400 md:h-2"></div>
@@ -85,7 +86,7 @@ export default function Home({ posts, authorDetails }) {
                       key={slug}
                       className="flex flex-col items-start p-12 md:w-1/2"
                     >
-                      <div className="relative mb-5 w-full pt-[60%]">
+                      <div className="relative mb-5 w-full rounded-2xl pt-[60%] drop-shadow-md">
                         <Image
                           src={thumbnail}
                           alt="profile"

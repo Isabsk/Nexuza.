@@ -1,16 +1,16 @@
 const siteMetadata = {
-  title: 'Imagiweb | A Creative Blog Site For Developers',
+  title: 'Nexuza. | Where Every Line Counts ',
   author: 'Isab Sk',
-  headerTitle: 'ImagiWeb',
+  headerTitle: 'Nexuza.',
   description: 'A blog site for developers, read. learn. code.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://imagiweb.tech',
+  siteUrl: 'https://nexuza.com',
   siteRepo: 'https://github.com/isabsk/imagiweb',
-  siteLogo: '/static/images/icon.png',
+  siteLogo: '/static/images/logo.svg',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/banner.png',
-  email: 'contact@imagiweb.tech',
+  email: 'contact@nexuza.com',
   github: 'https://github.com/isabsk',
   twitter: 'https://twitter.com/',
   facebook:
