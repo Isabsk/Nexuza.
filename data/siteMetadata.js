@@ -2,11 +2,11 @@ const siteMetadata = {
   title: 'Nexuza. | Where Every Line Counts ',
   author: 'Isab Sk',
   headerTitle: 'Nexuza.',
-  description: 'A blog site for developers, read. learn. code.',
+  description: 'Where Web Development Meets the Cosmos. Explore the universe of web development and coding with a cosmic twist on our blog. Unveil the celestial secrets of coding, while gazing at the stars of web development.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://nexuza.com',
-  siteRepo: 'https://github.com/isabsk/imagiweb',
+  siteRepo: 'https://github.com/isabsk/nexuza.',
   siteLogo: '/static/images/logo.svg',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/banner.png',
