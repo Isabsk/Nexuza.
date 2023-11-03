@@ -2,7 +2,8 @@ const siteMetadata = {
   title: 'Nexuza. | Where Every Line Counts ',
   author: 'Isab Sk',
   headerTitle: 'Nexuza.',
-  description: 'Where Web Development Meets the Cosmos. Explore the universe of web development and coding with a cosmic twist on our blog. Unveil the celestial secrets of coding, while gazing at the stars of web development.',
+  description:
+    'Where Web Development Meets the Cosmos. Explore the universe of web development and coding with a cosmic twist on our blog. Unveil the celestial secrets of coding, while gazing at the stars of web development.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://nexuza.com',
