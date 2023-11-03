@@ -29,7 +29,7 @@ export default function Home({ posts, authorDetails }) {
       />{' '}
       <div className="relative">
         <div className="">
-          <div className="mx-auto max-w-6xl bg-transparent bg-cover bg-center px-2 sm:px-2 md:bg-[url('/static/images/hero-bg-0.svg')]">
+          <div className="mx-auto max-w-6xl bg-transparent bg-cover bg-center px-2 sm:bg-[url('/static/images/hero-bg-0.svg')] sm:px-2">
             <div className="pb-10 pt-10 md:pb-5 md:pt-5 ">
               <div className="pb-12 text-center md:pb-16">
                 <h1
@@ -38,7 +38,7 @@ export default function Home({ posts, authorDetails }) {
                 >
                   Expand your coding universe with
                   <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                    &nbsp;Nexuza
+                    &nbsp;Nexuza.
                   </span>{' '}
                   <span className="-mb-4 ml-0.5 h-2 w-2 rounded-full bg-cyan-400">
                     {' '}
