@@ -16,7 +16,7 @@ const LayoutWrapper = ({ children }) => {
             <div>
               <Link href="/" aria-label={siteMetadata.headerTitle}>
                 <div className="flex items-center justify-between">
-                  <div className="relative mb-2 mr-1.5 block dark:hidden">
+                  <div className="relative mb-1 mr-1.5 block dark:hidden">
                     <Image
                       width={165}
                       height={55}
@@ -24,7 +24,7 @@ const LayoutWrapper = ({ children }) => {
                       alt="logo"
                     />
                   </div>
-                  <div className="relative mb-2 mr-1.5 hidden dark:block">
+                  <div className="relative mb-1 mr-1.5 hidden dark:block">
                     <Image
                       width={165}
                       height={55}
