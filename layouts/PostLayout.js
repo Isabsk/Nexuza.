@@ -48,7 +48,7 @@ export default function PostLayout({
                   <div className="relative mb-5 w-full pt-[60%]">
                     <Image
                       src={thumbnail}
-                      alt="profile"
+                      alt="thumbnail of blog post"
                       objectFit="cover"
                       layout="fill"
                       className="left-0 top-0 h-full w-full rounded-2xl object-cover"
