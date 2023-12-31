@@ -97,19 +97,16 @@ export default function PostLayout({
                         <dd className="text-gray-900 dark:text-gray-100">
                           {author.name}
                         </dd>
-                        <dt className="sr-only">Twitter</dt>
+                        <dt className="sr-only">Instagram</dt>
                         <dd>
-                          {author.twitter && (
+                          
                             <Link
-                              href={author.twitter}
+                              href="http://instagram.com/isabsk10"
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter.replace(
-                                'https://twitter.com/',
-                                '@'
-                              )}
+                              @isabsk10
                             </Link>
-                          )}
+                          
                         </dd>
                       </dl>
                     </li>
@@ -121,14 +118,8 @@ export default function PostLayout({
               <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">
                 {children}
               </div>
-              <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Discuss on Twitter'}
-                </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-              </div>
-              <Comments frontMatter={frontMatter} />
+              
+              
             </div>
             <footer>
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
@@ -149,7 +140,7 @@ export default function PostLayout({
                     {prev && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                          Previous Article
+                         Previous Article
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
