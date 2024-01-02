@@ -11,13 +11,13 @@ class MyDocument extends Document {
           />
           <link
             rel="icon"
-            type="image/png"
+            type="image/svg"
             sizes="32x32"
             href="/static/favicons/favicon.svg"
           />
           <link
             rel="icon"
-            type="image/png"
+            type="image/svg"
             sizes="16x16"
             href="/static/favicons/favicon.svg"
           />
@@ -27,16 +27,16 @@ class MyDocument extends Document {
             href="/static/favicons/safari-pinned-tab.svg"
             color="#5bbad5"
           />
-          <meta name="msapplication-TileColor" content="#000000" />
+          <meta name="msapplication-TileColor" content="#eee" />
           <meta
             name="theme-color"
             media="(prefers-color-scheme: light)"
-            content="#fff"
+            content="#0ea5e9"
           />
           <meta
             name="theme-color"
             media="(prefers-color-scheme: dark)"
-            content="#000"
+            content="#082f49"
           />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
