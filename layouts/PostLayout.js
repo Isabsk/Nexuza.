@@ -135,19 +135,37 @@ export default function PostLayout({
                   <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
                     {prev && (
                       <div>
-                        <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                        <h2 className="mb-4 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                           Previous Article
                         </h2>
+
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                          <Image
+                            src={prev.thumbnail}
+                            alt="thumbnail of blog post"
+                            height="85"
+                            width="140"
+                            className="left-0 top-0 h-full w-full rounded-[8px] object-cover"
+                          />
+                          <br />
+
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
                     )}
                     {next && (
                       <div>
-                        <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                        <h2 className="mb-4 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                           Next Article
                         </h2>
+                        <Image
+                          src={next.thumbnail}
+                          alt="thumbnail of blog post"
+                          height="85"
+                          width="140"
+                          className="left-0 top-0 h-full w-full rounded-[8px] object-cover"
+                        />
+                        <br />
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${next.slug}`}>{next.title}</Link>
                         </div>
