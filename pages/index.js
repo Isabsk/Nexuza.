@@ -20,7 +20,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ posts, authorDetails }) {
+export default function Home({ posts, authauthorDetailsorDetails }) {
   return (
     <>
       <PageSEO
