@@ -102,7 +102,7 @@ export default function PostLayout({
                           <Link
                             href="http://instagram.com/isabsk10"
                             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          >
+                          legacyBehavior>
                             @isabsk10
                           </Link>
                         </dd>
@@ -149,7 +149,7 @@ export default function PostLayout({
                           />
                           <br />
 
-                          <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/blog/${prev.slug}`} legacyBehavior>{prev.title}</Link>
                         </div>
                       </div>
                     )}
@@ -167,7 +167,7 @@ export default function PostLayout({
                         />
                         <br />
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/blog/${next.slug}`} legacyBehavior>{next.title}</Link>
                         </div>
                       </div>
                     )}
@@ -178,7 +178,7 @@ export default function PostLayout({
                 <Link
                   href="/blog"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                >
+                legacyBehavior>
                   &larr; Back to the blog
                 </Link>
               </div>
