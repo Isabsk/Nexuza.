@@ -14,7 +14,7 @@ const LayoutWrapper = ({ children }) => {
         <div className="-mt-3 flex h-screen flex-col justify-between md:mt-0">
           <header className="flex items-center justify-between py-10">
             <div>
-              <Link href="/" aria-label={siteMetadata.headerTitle}>
+              <Link href="/" aria-label={siteMetadata.headerTitle} legacyBehavior>
                 <div className="flex items-center justify-between">
                   <div className="relative mb-1 mr-1.5 block dark:hidden">
                     <Image
@@ -43,7 +43,7 @@ const LayoutWrapper = ({ children }) => {
                     key={link.title}
                     href={link.href}
                     className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
-                  >
+                  legacyBehavior>
                     {link.title}
                   </Link>
                 ))}
