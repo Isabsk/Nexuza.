@@ -53,6 +53,7 @@ const LayoutWrapper = ({ children }) => {
             </div>
           </header>
           <main className="mb-auto">{children}</main>
+<iframe src="https://nexuza.beehiiv.com/subscribe" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
           <Footer />
         </div>
       </SectionContainer>
