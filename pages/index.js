@@ -100,7 +100,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                           <Tag key={tag} text={tag} />
                         ))}{' '}
                       </div>
-                      <Link href={`/blog/${slug}`}>
+                      <Link href={`/blog/${slug}`} legacyBehavior>
                         <h2 className="title-font mb-4 mt-4 text-2xl font-extrabold text-gray-900 dark:text-white sm:text-3xl">
                           {title}
                         </h2>
@@ -158,7 +158,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
           <Link
             href="/blog"
             className="mb-5 ml-auto mr-auto rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 px-5 py-2.5 text-center text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800"
-            aria-label="all posts"
+            aria-label="all posts" legacyBehavior
           >
             All Posts -->
           </Link>
