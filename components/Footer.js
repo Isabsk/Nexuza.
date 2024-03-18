@@ -14,7 +14,10 @@ export default function Footer() {
           <Link href="/">ImagiWeb.</Link>
         </div>
         <div className="mb-8 text-sm text-white dark:text-white">
-          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog" legacyBehavior>
+          <Link
+            href="https://github.com/timlrx/tailwind-nextjs-starter-blog"
+            legacyBehavior
+          >
             Tailwind Nextjs Theme
           </Link>
         </div>

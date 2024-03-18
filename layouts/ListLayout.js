@@ -101,10 +101,12 @@ export default function ListLayout({
                       {summary}
                     </p>
                     <div className="mb-4 mt-auto flex w-full flex-wrap items-center border-b-2 border-gray-100 pb-4">
-                      <Link href={`/blog/${slug}`} className="inline-flex items-center text-cyan-500 dark:text-cyan-300" legacyBehavior>
-                        
-                          Learn More -->
-                        
+                      <Link
+                        href={`/blog/${slug}`}
+                        className="inline-flex items-center text-cyan-500 dark:text-cyan-300"
+                        legacyBehavior
+                      >
+                        Learn More -->
                       </Link>
                       <span className="ml-auto mr-3 inline-flex items-center border-r-2 border-gray-200 py-1 pr-3 text-[12px] leading-none text-gray-600 dark:text-gray-200">
                         <svg

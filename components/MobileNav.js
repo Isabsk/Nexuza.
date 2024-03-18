@@ -71,7 +71,8 @@ const MobileNav = () => {
                 href={link.href}
                 className="text-3xl font-extrabold text-white dark:text-gray-100"
                 onClick={onToggleNav}
-             legacyBehavior >
+                legacyBehavior
+              >
                 {link.title}
               </Link>
             </div>

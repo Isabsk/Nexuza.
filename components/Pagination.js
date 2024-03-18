@@ -21,7 +21,8 @@ export default function Pagination({ totalPages, currentPage }) {
             href={
               currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`
             }
-          legacyBehavior>
+            legacyBehavior
+          >
             <button rel="previous">Previous</button>
           </Link>
         )}
