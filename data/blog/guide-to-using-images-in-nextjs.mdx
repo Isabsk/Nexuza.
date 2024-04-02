@@ -7,7 +7,6 @@ avatar: '/static/images/avatar.png'
 draft: true
 summary: 'In this article we introduce adding images in the tailwind starter blog and the benefits and limitations of the next/image component.'
 author: ['sparrowhawk']
-
 ---
 
 # Introduction
@@ -25,7 +24,12 @@ function Home() {
   return (
     <>
       <h1>My Homepage</h1>
-      <Image src="/me.png" alt="Picture of the author" width={500} height={500} />
+      <Image
+        src="/me.png"
+        alt="Picture of the author"
+        width={500}
+        height={500}
+      />
       <p>Welcome to my homepage!</p>
     </>
   )

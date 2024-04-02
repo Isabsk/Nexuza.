@@ -33,7 +33,7 @@ class MyDocument extends Document {
             media="(prefers-color-scheme: light)"
             content="#0ea5e9"
           />
-          
+
           <meta
             name="theme-color"
             media="(prefers-color-scheme: dark)"

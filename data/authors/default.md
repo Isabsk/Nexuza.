@@ -1,8 +1,8 @@
 ---
 name: Isab SK
 avatar: /static/images/avatar.png
-occupation: Jr. Full Stack Developer 
-company: Ready to Work 
+occupation: Jr. Full Stack Developer
+company: Ready to Work
 email: isabsk10@gmail.com
 twitter: https://twitter.com/Twitter
 linkedin: https://www.linkedin.com

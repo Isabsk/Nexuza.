@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 function NewsLetter() {
-  const [loadIframe, setLoadIframe] = useState(false);
+  const [loadIframe, setLoadIframe] = useState(false)
 
   useEffect(() => {
     // You can set conditions here for when you want the iframe to load
-    setLoadIframe(true);
-  }, []);
+    setLoadIframe(true)
+  }, [])
 
   return (
     <div>
@@ -21,7 +21,7 @@ function NewsLetter() {
         ></iframe>
       )}
     </div>
-  );
+  )
 }
 
-export default NewsLetter;
+export default NewsLetter

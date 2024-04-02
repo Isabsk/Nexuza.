@@ -109,12 +109,11 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                         {summary}
                       </p>
                       <div className="mb-4 mt-auto flex w-full flex-wrap items-center border-b-2 border-gray-100 pb-4">
-                        <a className="inline-flex items-center text-cyan-500 dark:text-cyan-300"><Link
-                          href={`/blog/${slug}`}
-                          legacyBehavior
-                        >
-                          Learn More -->
-                        </Link></a>
+                        <a className="inline-flex items-center text-cyan-500 dark:text-cyan-300">
+                          <Link href={`/blog/${slug}`} legacyBehavior>
+                            Learn More -->
+                          </Link>
+                        </a>
                         <span className="ml-auto mr-3 inline-flex items-center border-r-2 border-gray-200 py-1 pr-3 text-[12px] leading-none text-gray-600 dark:text-gray-200">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -157,13 +156,10 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
         </div>{' '}
         <div className="w-full text-center">
           <a className="mb-5 ml-auto mr-auto rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 px-5 py-2.5 text-center text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800">
-          <Link
-            href="/blog"
-            aria-label="all posts"
-            legacyBehavior
-          >
-            All Posts -->
-          </Link></a>
+            <Link href="/blog" aria-label="all posts" legacyBehavior>
+              All Posts -->
+            </Link>
+          </a>
         </div>
       </div>{' '}
     </>
