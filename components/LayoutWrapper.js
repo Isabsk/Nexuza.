@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import NewsLetter from './NewsLetter'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -43,14 +44,13 @@ const LayoutWrapper = ({ children }) => {
             <div className="flex items-center text-base leading-5">
               <div className="hidden sm:block">
                 {headerNavLinks.map((link) => (
-                  <Link
+                  <a className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"><Link
                     key={link.title}
                     href={link.href}
-                    className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
                     legacyBehavior
                   >
                     {link.title}
-                  </Link>
+                  </Link></a>
                 ))}
               </div>
               <ThemeSwitch />
@@ -58,13 +58,7 @@ const LayoutWrapper = ({ children }) => {
             </div>
           </header>
           <main className="mb-auto">{children}</main>
-          <iframe
-            src="https://nexuza.beehiiv.com/subscribe/"
-            frameBorder="0"
-            width="100%"
-            height="500px"
-            allowFullScreen
-          ></iframe>
+          <NewsLetter lazy load={true} />
           <Footer />
         </div>
       </SectionContainer>
