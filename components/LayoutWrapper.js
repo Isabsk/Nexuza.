@@ -13,7 +13,7 @@ const LayoutWrapper = ({ children }) => {
     <>
       <SectionContainer>
         <div className="-mt-3 flex h-screen flex-col justify-between md:mt-0">
-          <header className="flex items-center justify-between py-10">
+          <header className="flex items-center justify-between py-10 z-999999">
             <div>
               <Link
                 href="/"
