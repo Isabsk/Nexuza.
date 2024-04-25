@@ -31,7 +31,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
     <div className="bg-transparent">
       
 
-      <div className="relative isolate px-6 pt-2 lg:px-2">
+      <div className="relative isolate h-[84vh] px-6 pt-2 lg:px-2">
         <div
           className="absolute inset-x-0 transform-gpu overflow-hidden blur-3xl"
           aria-hidden="true"
@@ -44,7 +44,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
             }}
           />
         </div>
-        <div className="mx-auto max-w-3xl py-6 sm:py-14 lg:py-20">
+        <div className="mx-auto max-w-3xl py-6 sm:py-14 lg:py-14">
           <div className="sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-100 ring-1 ring-gray-900/10 dark:ring-gray-300 hover:ring-gray-900/20 dark:hover:ring-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Announcing our next round of funding.{' '}
@@ -70,12 +70,13 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 px-6npm install -g @google/idx
+ py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
+              <a href="#" className="text-xl font-semibold leading-6 text-gray-900">
+                Learn more <span aria-hidden="true" >→</span>
               </a>
             </div>
           </div>
