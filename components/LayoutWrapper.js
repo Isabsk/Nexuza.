@@ -13,7 +13,7 @@ const LayoutWrapper = ({ children }) => {
     <>
       <SectionContainer>
         <div className="-mt-3 flex h-screen flex-col justify-between md:mt-0">
-          <header className="flex items-center justify-between py-10 z-999999">
+          <header className="flex items-center justify-between py-5 z-999999">
             <div>
               <Link
                 href="/"
@@ -21,28 +21,21 @@ const LayoutWrapper = ({ children }) => {
                 legacyBehavior
               >
                 <div className="flex items-center justify-between">
-                  <div className="relative mb-1 mr-1.5 block dark:hidden">
+                  <div className="relative mb-1 mr-1.5">
                     <Image
-                      width={165}
-                      height={55}
-                      src="/static/images/logo.svg"
+                      width={50}
+                      height={50}
+                      src="/static/favicons/favicon.png"
                       alt="logo"
                     />
                   </div>
-                  <div className="relative mb-1 mr-1.5 hidden dark:block">
-                    <Image
-                      width={165}
-                      height={55}
-                      src="/static/images/logo-dark.svg"
-                      alt="logo"
-                    />
-                  </div>
+                  
                   <div className="h-6 text-2xl font-extrabold"></div>
                 </div>
               </Link>
             </div>
-            <div className="flex items-center text-base leading-5">
-              <div className="hidden sm:block">
+            <div className="flex items-center justify-center text-base leading-5">
+              <div className="hidden sm:block ml-0 ">
                 {headerNavLinks.map((link) => (
                   <a
                     key={link.title}
@@ -54,6 +47,11 @@ const LayoutWrapper = ({ children }) => {
                   </a>
                 ))}
               </div>
+              
+              
+            </div>
+            <div className="flex items-center justify-center text-base leading-5">
+             
               <ThemeSwitch />
               <MobileNav />
             </div>
