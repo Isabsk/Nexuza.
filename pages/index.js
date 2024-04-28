@@ -111,6 +111,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
             height="320px"
             frameborder="0"
             scrolling="no"
+            sandbox="allow-scripts"
           ></iframe>
         </div>
       </div>
