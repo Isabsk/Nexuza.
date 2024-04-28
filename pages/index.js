@@ -103,9 +103,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
             />
           </div>
         </div>
-        <div>
-          
-        </div>
+        <div></div>
       </div>
       <div className="relative">
         <div className="">
