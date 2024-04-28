@@ -23,8 +23,8 @@ const LayoutWrapper = ({ children }) => {
                 <div className="flex items-center justify-between">
                   <div className="relative mb-1 mr-1.5">
                     <Image
-                      width={50}
-                      height={50}
+                      width={60}
+                      height={60}
                       src="/static/favicons/favicon.png"
                       alt="logo"
                     />
@@ -50,6 +50,18 @@ const LayoutWrapper = ({ children }) => {
             </div>
             <div className="flex items-center justify-center text-base leading-5">
               <ThemeSwitch />
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc0iUMeIdI3Uiw8spRsz_JzmM1yiTHZhOfz4fmldj_fDgYYJw/viewform?usp=sf_link"
+                class="text-md group relative ml-4 inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 font-semibold text-indigo-600 shadow-2xl"
+              >
+                <span class="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-40 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
+                <span class="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
+                  <span class="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-500 blur-md"></span>
+                  <span class="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
+                </span>
+                <span class="relative text-white">Write For Us →</span>
+              </a>
               <MobileNav />
             </div>
           </header>

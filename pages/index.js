@@ -44,13 +44,14 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
           <div className="mx-auto max-w-3xl py-6 sm:py-14 lg:py-14">
             <div className="sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-gray-100 dark:ring-gray-300 dark:hover:ring-gray-500">
-                Announcing our next round of funding.{' '}
+                Elevate Your Tech Skills With Nexuza Tuts.{' '}
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://tuts.nexuza.com/"
                   className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text font-semibold text-transparent"
                 >
                   <span className="absolute inset-0" aria-hidden="true" />
-                  Read more <span aria-hidden="true">&rarr;</span>
+                  Visit Now <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>
@@ -69,16 +70,24 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="#"
-                  className="rounded-[10px] bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc0iUMeIdI3Uiw8spRsz_JzmM1yiTHZhOfz4fmldj_fDgYYJw/viewform?usp=sf_link"
+                  class="group relative inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 text-xl font-semibold text-indigo-600 shadow-2xl"
                 >
-                  Get started
+                  <span class="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-40 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
+                  <span class="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
+                    <span class="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-500 blur-md"></span>
+                    <span class="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
+                  </span>
+                  <span class="relative text-white">Write For Us</span>
                 </a>
                 <a
                   href="#"
                   className="text-xl font-semibold leading-6 text-gray-900 dark:text-white"
                 >
-                  Learn more <span aria-hidden="true">→</span>
+                  <Link href="/blog" aria-label="all posts" legacyBehavior>
+                    All Posts →
+                  </Link>
                 </a>
               </div>
             </div>
