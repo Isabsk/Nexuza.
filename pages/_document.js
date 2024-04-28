@@ -33,7 +33,10 @@ class MyDocument extends Document {
             media="(prefers-color-scheme: light)"
             content="#0ea5e9"
           />
-          <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://embeds.beehiiv.com;" />
+          <meta
+            http-equiv="Content-Security-Policy"
+            content="frame-src 'self' https://embeds.beehiiv.com;"
+          />
 
           <meta
             name="theme-color"

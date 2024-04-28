@@ -13,7 +13,7 @@ const LayoutWrapper = ({ children }) => {
     <>
       <SectionContainer>
         <div className="-mt-3 flex h-screen flex-col justify-between md:mt-0">
-          <header className="flex items-center justify-between py-5 z-999999">
+          <header className="z-999999 flex items-center justify-between py-5">
             <div>
               <Link
                 href="/"
@@ -29,13 +29,13 @@ const LayoutWrapper = ({ children }) => {
                       alt="logo"
                     />
                   </div>
-                  
+
                   <div className="h-6 text-2xl font-extrabold"></div>
                 </div>
               </Link>
             </div>
             <div className="flex items-center justify-center text-base leading-5">
-              <div className="hidden sm:block ml-0 ">
+              <div className="ml-0 hidden sm:block ">
                 {headerNavLinks.map((link) => (
                   <a
                     key={link.title}
@@ -47,11 +47,8 @@ const LayoutWrapper = ({ children }) => {
                   </a>
                 ))}
               </div>
-              
-              
             </div>
             <div className="flex items-center justify-center text-base leading-5">
-             
               <ThemeSwitch />
               <MobileNav />
             </div>
