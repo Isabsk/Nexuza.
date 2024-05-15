@@ -35,7 +35,7 @@ class MyDocument extends Document {
           />
           <meta
             http-equiv="Content-Security-Policy"
-            content="frame-src 'self' https://embeds.beehiiv.com;"
+            content="frame-src 'self' https://embeds.beehiiv.com/"
           />
 
           <meta

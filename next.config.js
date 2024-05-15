@@ -15,7 +15,6 @@ const ContentSecurityPolicy = `
 
 `
 
-
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
   {
@@ -61,7 +60,7 @@ module.exports = withBundleAnalyzer({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      frameSrc: ["https://allowed-iframe-host.com"],
+      frameSrc: ['https://allowed-iframe-host.com'],
       // ...
     },
   },
