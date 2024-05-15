@@ -28,7 +28,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
         description={siteMetadata.description}
       />{' '}
       <div className="bg-transparent">
-        <div className="relative isolate h-[86vh] px-6 pt-2 lg:px-2">
+        <div className="relative isolate h-[86vh] px-6 pt-2 lg:px-6">
           <div
             className="absolute inset-x-0 transform-gpu overflow-hidden blur-3xl"
             aria-hidden="true"
@@ -41,7 +41,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
               }}
             />
           </div>
-          <div className="mx-auto max-w-3xl py-6 sm:py-14 lg:py-14">
+          <div className="lg:py-18 mx-auto mt-6 max-w-3xl py-6 sm:py-14">
             <div className="sm:mb-8 sm:flex sm:justify-center">
               <div
                 data-aos="fade"
@@ -49,7 +49,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                 data-aos-duration="800"
                 className="relative rounded-full py-1.5 pl-1.5 pr-3 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-gray-100 dark:ring-gray-500 dark:hover:ring-gray-300"
               >
-                <span class="animate-text mr-3 rounded-full bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-500 px-4 py-1.5 text-xs font-bold text-white">
+                <span className="animate-text mr-3 rounded-full bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-500 px-4 py-1.5 text-xs font-bold text-white">
                   New
                 </span>{' '}
                 Elevate Your Tech Skills With Nexuza Tuts.{' '}
@@ -73,7 +73,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                 Expand your coding universe with
                 <span
                   data-aos="slide-up"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent hover:bg-gradient-to-r hover:from-cyan-500"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent"
                 >
                   &nbsp;Nexuza.
                 </span>{' '}
@@ -98,14 +98,14 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                 <a
                   target="_blank"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSc0iUMeIdI3Uiw8spRsz_JzmM1yiTHZhOfz4fmldj_fDgYYJw/viewform?usp=sf_link"
-                  class="group relative inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 text-xl font-semibold text-indigo-600 shadow-xl"
+                  className="group relative inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 text-xl font-semibold text-indigo-600 shadow-xl"
                 >
-                  <span class="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
-                  <span class="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
-                    <span class="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-400 blur-xl"></span>
-                    <span class="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
+                  <span className="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
+                  <span className="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
+                    <span className="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-400 blur-xl"></span>
+                    <span className="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
                   </span>
-                  <span class="relative text-white">Write For Us</span>
+                  <span className="relative text-white">Write For Us</span>
                 </a>
                 <a
                   href="#"
@@ -174,13 +174,13 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                       key={slug}
                       className="flex flex-col items-start p-12 md:w-1/2"
                     >
-                      <div className="relative mb-5 w-full rounded-2xl pt-[60%] drop-shadow-md">
+                      <div className="relative mb-5 w-full rounded-2xl bg-gray-200 pt-[60%] drop-shadow-md">
                         <Image
                           src={thumbnail}
                           alt="profile"
                           objectFit="cover"
                           layout="fill"
-                          className="left-0 top-0 h-full w-full rounded-2xl object-cover"
+                          className="left-0 top-0 h-full w-full rounded-t-2xl object-cover"
                         />
                       </div>
                       <div className="flex flex-wrap">
@@ -189,52 +189,33 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                         ))}{' '}
                       </div>
                       <Link href={`/blog/${slug}`} legacyBehavior>
-                        <h2 className="title-font mb-4 mt-4 text-2xl font-extrabold text-gray-900 dark:text-white sm:text-3xl">
+                        <h2 className="title-font mb-4 mt-6 text-2xl font-extrabold text-gray-900 dark:text-white sm:text-3xl">
                           {title}
                         </h2>
                       </Link>
-                      <p className="mb-8 font-light text-gray-600 dark:text-gray-200">
+                      <p className="mb-2 font-light text-gray-600 dark:text-gray-200">
                         {summary}
                       </p>
-                      <div className="mb-4 mt-auto flex w-full flex-wrap items-center border-b-2 border-gray-100 pb-4">
-                        <a className="inline-flex items-center text-cyan-500 dark:text-cyan-300">
+                      <div className=" mt-auto flex w-full flex-wrap items-center border-gray-100">
+                        <span className="group mt-6 inline-flex h-9 items-center whitespace-nowrap rounded-full bg-slate-200 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600 dark:hover:text-slate-100">
                           <Link href={`/blog/${slug}`} legacyBehavior>
-                            Learn More -->
+                            Learn More
                           </Link>
-                        </a>
-                        <span className="ml-auto mr-3 inline-flex items-center border-r-2 border-gray-200 py-1 pr-3 text-[12px] leading-none text-gray-600 dark:text-gray-200">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            className="bi bi-calendar-event-fill"
-                            viewBox="0 0 16 16"
+                            className="ml-3 overflow-visible text-slate-500 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-200"
+                            width="3"
+                            height="6"
+                            viewBox="0 0 3 6"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                           >
-                            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
+                            <path d="M0 0L3 3L0 6"></path>
                           </svg>
                         </span>
-                        <span className="inline-flex items-center text-[12px] leading-none text-gray-600 dark:text-gray-200">
-                          <time dateTime={date}> {formatDate(date)} </time>
-                        </span>
                       </div>
-                      <a className="inline-flex items-center ">
-                        <Image
-                          alt="blog"
-                          src={avatar}
-                          height="45"
-                          width="45"
-                          className="h-11 w-11 flex-shrink-0 rounded-full object-cover object-center"
-                        />
-                        <span className="flex flex-grow flex-col pl-4">
-                          <span className="title-font text-md font-medium text-gray-900 dark:text-white">
-                            {author}
-                          </span>
-                          <p className="text-sm text-gray-600 dark:text-gray-200">
-                            Developer
-                          </p>
-                        </span>
-                      </a>
                     </li>
                   )
                 })}{' '}
@@ -243,10 +224,17 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
           </section>
         </div>{' '}
         <div className="w-full text-center">
-          <a className="mb-5 ml-auto mr-auto rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 px-5 py-2.5 text-center text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800">
-            <Link href="/blog" aria-label="all posts" legacyBehavior>
-              All Posts -->
-            </Link>
+          <a className="group relative inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 text-xl font-semibold text-indigo-600 shadow-xl">
+            <span className="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
+            <span className="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
+              <span className="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-400 blur-xl"></span>
+              <span className="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
+            </span>
+            <span className="relative text-white">
+              <Link href="/blog" aria-label="all posts" legacyBehavior>
+                All Posts -->
+              </Link>
+            </span>
           </a>
         </div>
       </div>{' '}

@@ -14,6 +14,7 @@ function NewsLetter() {
         <iframe
           src="https://embeds.beehiiv.com/f20489b7-f7a3-4510-8b35-20d76fdfd67c?slim=true"
           data-test-id="beehiiv-embed"
+          sandbox="allow-scripts"
           height="52"
           frameborder="0"
           scrolling="no"

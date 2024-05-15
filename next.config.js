@@ -11,8 +11,10 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+  frame-src giscus.app;
+
 `
+
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
@@ -55,6 +57,13 @@ const securityHeaders = [
 module.exports = withBundleAnalyzer({
   images: {
     domains: ['res.cloudinary.com'],
+  },
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      frameSrc: ["https://allowed-iframe-host.com"],
+      // ...
+    },
   },
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],

@@ -57,14 +57,14 @@ const LayoutWrapper = ({ children }) => {
               <a
                 target="_blank"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc0iUMeIdI3Uiw8spRsz_JzmM1yiTHZhOfz4fmldj_fDgYYJw/viewform?usp=sf_link"
-                class="text-md group relative ml-4 inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 font-semibold text-indigo-600 shadow-xl"
+                className="text-md group relative ml-4 inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 font-semibold text-indigo-600 shadow-xl"
               >
-                <span class="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
-                <span class="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
-                  <span class="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-400 blur-xl"></span>
-                  <span class="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
+                <span className="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
+                <span className="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
+                  <span className="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-400 blur-xl"></span>
+                  <span className="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
                 </span>
-                <span class="relative text-white">Write For Us --></span>
+                <span className="relative text-white">Write For Us --></span>
               </a>
               <MobileNav />
             </div>

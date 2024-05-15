@@ -20,9 +20,14 @@ export default function FourZeroFour() {
             But dont worry, you can find plenty of other things on our homepage.
           </p>
           <Link href="/" legacyBehavior>
-            <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500">
-              Back to homepage
-            </button>
+            <a className="text-md group relative inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 font-semibold text-indigo-600 shadow-xl">
+              <span className="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
+              <span className="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
+                <span className="absolute bottom-0 left-0 -ml-10 h-24 w-24 rounded-full bg-cyan-400 blur-xl"></span>
+                <span className="absolute bottom-0 right-0 -mr-10 h-24 w-24 rounded-full bg-blue-600 blur-xl"></span>
+              </span>
+              <span className="relative text-white">Go To Homepage</span>
+            </a>
           </Link>
         </div>
       </div>

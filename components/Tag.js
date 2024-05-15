@@ -4,11 +4,11 @@ import kebabCase from '@/lib/utils/kebabCase'
 const Tag = ({ text }) => {
   return (
     <>
-      <a className="mr-2 mt-2 inline-block rounded bg-gray-100 bg-gradient-to-br from-blue-500 to-cyan-400 px-3 py-1.5 text-xs font-extrabold uppercase tracking-widest text-white">
+      <span className="me-2 mr-2 mt-2 rounded-full border-2 border-sky-500 bg-gradient-to-r from-sky-100 to-cyan-100 px-4 py-1 text-[13px] font-medium text-sky-600 dark:border-sky-200 dark:from-blue-900 dark:to-blue-900 dark:text-sky-200 ">
         <Link href={`/tags/${kebabCase(text)}`} legacyBehavior>
           {text.split(' ').join('-')}
         </Link>
-      </a>
+      </span>
     </>
   )
 }

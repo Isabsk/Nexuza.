@@ -38,14 +38,14 @@ export default function PostLayout({
         authorDetails={authorDetails}
         {...frontMatter}
       />
-      <ScrollTopAndComment />
+
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <div className="relative mb-5 w-full pt-[60%]">
+                  <div className="relative mx-[15%] mb-5 w-[70%] pt-[40%]">
                     <Image
                       src={thumbnail}
                       alt="thumbnail of blog post"
