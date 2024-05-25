@@ -13,6 +13,7 @@ import 'aos/dist/aos.css'
 
 import siteMetadata from '@/data/siteMetadata'
 import Analytics from '@/components/analytics'
+import GAScript from '@/components/analytics/GoogleAnalytics.js'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 
@@ -34,6 +35,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
+      <GAScript />
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>
