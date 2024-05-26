@@ -55,6 +55,22 @@ class MyDocument extends Document {
             content="#082f49"
           />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-THFCERS795"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-THFCERS795');
+              `,
+            }}
+          />
         </Head>
         <body className="!overflow-visible bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
           <noscript>

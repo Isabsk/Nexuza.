@@ -70,7 +70,7 @@ const LayoutWrapper = ({ children }) => {
             </div>
           </header>
           <main className="mb-auto">{children}</main>
-          <NewsLetter lazy load={true} />
+          <NewsLetter />
           <Footer />
         </div>
       </SectionContainer>

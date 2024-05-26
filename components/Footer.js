@@ -6,7 +6,6 @@ export default function Footer() {
   return (
     <footer>
       <div className="mt-16 flex flex-col items-center rounded-tl-2xl rounded-tr-2xl bg-gradient-to-r from-blue-500 to-cyan-400 pt-5">
-        <iframe src="https://embeds.beehiiv.com/f20489b7-f7a3-4510-8b35-20d76fdfd67c?slim=true"></iframe>
         <div className="mb-2 flex space-x-2 text-sm text-white dark:text-white">
           <div>{siteMetadata.author}</div>
           <div>{` • `}</div>

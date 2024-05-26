@@ -29,7 +29,7 @@ export default function ListLayout({
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <div className="space-y-2 px-10 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
@@ -102,12 +102,12 @@ export default function ListLayout({
                       {summary}
                     </p>
                     <div className=" mt-auto flex w-full flex-wrap items-center border-gray-100">
-                      <span className="group mt-6 inline-flex h-9 items-center whitespace-nowrap rounded-full bg-slate-200 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500">
+                      <span className="group mt-6 inline-flex h-9 items-center whitespace-nowrap rounded-full bg-slate-200 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600 dark:hover:text-slate-100">
                         <Link href={`/blog/${slug}`} legacyBehavior>
                           Learn More
                         </Link>
                         <svg
-                          className="ml-3 overflow-visible text-slate-500 group-hover:text-slate-800"
+                          className="ml-3 overflow-visible text-slate-500 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-200"
                           width="3"
                           height="6"
                           viewBox="0 0 3 6"
