@@ -13,10 +13,10 @@ const LayoutWrapper = ({ children }) => {
       <SectionContainer>
         <div
           data-aos="fade"
-          className="md:-mt-3 flex bg-white dark:bg-gray-900 h-screen flex-col justify-between overflow-visible md:mt-0"
+          className="flex h-screen flex-col justify-between overflow-visible bg-white dark:bg-gray-900 md:-mt-3 md:mt-0"
         >
           <header className="flex items-center justify-between md:py-10">
-            <div className='mt-3'>
+            <div className="mt-3">
               <Link
                 href="/"
                 aria-label={siteMetadata.headerTitle}
@@ -51,7 +51,7 @@ const LayoutWrapper = ({ children }) => {
                 ))}
               </div>
             </div>
-            <div className="flex mt-3 items-center justify-center text-base leading-5">
+            <div className="mt-3 flex items-center justify-center text-base leading-5">
               <ThemeSwitch />
               <a
                 target="_blank"
@@ -67,14 +67,10 @@ const LayoutWrapper = ({ children }) => {
               </a>
               <MobileNav />
             </div>
-
-
-           
-
           </header>
 
           <main className="mb-auto">{children}</main>
-          
+
           <Footer />
         </div>
       </SectionContainer>

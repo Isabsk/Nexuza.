@@ -47,7 +47,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                 data-aos="fade"
                 data-aos-delay="1200"
                 data-aos-duration="800"
-                className="relative hidden sm:block rounded-full py-1.5 pl-1.5 pr-3 md:text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-gray-100 dark:ring-gray-500 dark:hover:ring-gray-300"
+                className="relative hidden rounded-full py-1.5 pl-1.5 pr-3 leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-gray-100 dark:ring-gray-500 dark:hover:ring-gray-300 sm:block md:text-sm"
               >
                 <span className="animate-text mr-3 rounded-full bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-500 px-4 py-1.5 text-xs font-bold text-white">
                   New

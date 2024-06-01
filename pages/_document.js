@@ -84,7 +84,10 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body style={{overflowX: "hidden"}} className="!overflow-y-visible !overflow-x-hidden bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+        <body
+          style={{ overflowX: 'hidden' }}
+          className="!overflow-x-hidden !overflow-y-visible bg-white text-black antialiased dark:bg-gray-900 dark:text-white"
+        >
           <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-KH2BK3MQ"

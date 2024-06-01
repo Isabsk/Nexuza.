@@ -45,7 +45,7 @@ export default function PostLayout({
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <div className="relative sm:mx-[15%] mx-[10%] mb-5 w-[80%] sm:w-[70%] sm:pt-[40%] pt-[45%]">
+                  <div className="relative mx-[10%] mb-5 w-[80%] pt-[45%] sm:mx-[15%] sm:w-[70%] sm:pt-[40%]">
                     <Image
                       src={thumbnail}
                       alt="thumbnail of blog post"
