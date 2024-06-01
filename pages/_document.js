@@ -48,7 +48,19 @@ class MyDocument extends Document {
             http-equiv="Content-Security-Policy"
             content="frame-src 'self' https://embeds.beehiiv.com/"
           />
-
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content="
+              default-src 'self';
+              script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app https://www.googletagmanager.com https://plausible.io;
+              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+              font-src 'self' https://fonts.gstatic.com;
+            "
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+          />
           <meta
             name="theme-color"
             media="(prefers-color-scheme: dark)"
@@ -72,7 +84,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className="!overflow-visible bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+        <body style={{overflowX: "hidden"}} className="!overflow-y-visible !overflow-x-hidden bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
           <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-KH2BK3MQ"

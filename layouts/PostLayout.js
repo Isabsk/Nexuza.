@@ -41,11 +41,11 @@ export default function PostLayout({
 
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+          <header className="pt-10 sm:pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <div className="relative mx-[15%] mb-5 w-[70%] pt-[40%]">
+                  <div className="relative sm:mx-[15%] mx-[10%] mb-5 w-[80%] sm:w-[70%] sm:pt-[40%] pt-[45%]">
                     <Image
                       src={thumbnail}
                       alt="thumbnail of blog post"

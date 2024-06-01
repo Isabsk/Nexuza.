@@ -6,7 +6,6 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import NewsLetter from './NewsLetter'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -14,10 +13,10 @@ const LayoutWrapper = ({ children }) => {
       <SectionContainer>
         <div
           data-aos="fade"
-          className="-mt-3 flex h-screen flex-col justify-between overflow-visible md:mt-0"
+          className="md:-mt-3 flex bg-white dark:bg-gray-900 h-screen flex-col justify-between overflow-visible md:mt-0"
         >
-          <header className="z-999999 flex items-center justify-between py-5">
-            <div>
+          <header className="flex items-center justify-between md:py-10">
+            <div className='mt-3'>
               <Link
                 href="/"
                 aria-label={siteMetadata.headerTitle}
@@ -38,7 +37,7 @@ const LayoutWrapper = ({ children }) => {
               </Link>
             </div>
             <div></div>
-            <div className="flex items-center justify-center text-base leading-5">
+            <div className="mt-3 flex items-center justify-center text-base leading-5">
               <div className="ml-0 hidden sm:block ">
                 {headerNavLinks.map((link) => (
                   <a
@@ -52,7 +51,7 @@ const LayoutWrapper = ({ children }) => {
                 ))}
               </div>
             </div>
-            <div className="flex items-center justify-center text-base leading-5">
+            <div className="flex mt-3 items-center justify-center text-base leading-5">
               <ThemeSwitch />
               <a
                 target="_blank"
@@ -68,9 +67,14 @@ const LayoutWrapper = ({ children }) => {
               </a>
               <MobileNav />
             </div>
+
+
+           
+
           </header>
+
           <main className="mb-auto">{children}</main>
-          <NewsLetter />
+          
           <Footer />
         </div>
       </SectionContainer>
