@@ -119,7 +119,7 @@ export default function PostLayout({
               </div>
             </div>
             <footer>
-              <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
+              <div className="divide-gray-200 lg:sticky top-[0px] text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                 {tags && (
                   <div className="py-4 xl:py-8">
                     <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
@@ -144,9 +144,9 @@ export default function PostLayout({
                           <Image
                             src={prev.thumbnail}
                             alt="thumbnail of blog post"
-                            height="85"
+                            height="80"
                             width="140"
-                            className="left-0 top-0 h-full w-full rounded-[8px] object-cover"
+                            className="left-0 top-0 lg:h-full lg:w-full rounded-[8px] object-cover"
                           />
                           <br />
 
@@ -164,9 +164,9 @@ export default function PostLayout({
                         <Image
                           src={next.thumbnail}
                           alt="thumbnail of blog post"
-                          height="85"
+                          height="80"
                           width="140"
-                          className="left-0 top-0 h-full w-full rounded-[8px] object-cover"
+                          className="left-0 top-0 lg:h-full lg:w-full rounded-[8px] object-cover"
                         />
                         <br />
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
@@ -178,8 +178,7 @@ export default function PostLayout({
                     )}
                   </div>
                 )}
-              </div>
-              <div className="pt-4 xl:pt-8">
+                <div className="pt-4 xl:pt-8">
                 <Link
                   href="/blog"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -188,6 +187,8 @@ export default function PostLayout({
                   &larr; Back to the blog
                 </Link>
               </div>
+              </div>
+              
             </footer>
           </div>
         </div>
