@@ -4,6 +4,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com giscus.app; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `

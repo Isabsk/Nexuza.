@@ -15,7 +15,7 @@ const LayoutWrapper = ({ children }) => {
           data-aos="fade"
           className="flex h-screen flex-col justify-between overflow-visible bg-white dark:bg-gray-900 md:-mt-3 md:mt-0"
         >
-          <header className="flex items-center justify-between md:py-10">
+          <header className="flex items-center justify-between md:py-4">
             <div className="mt-3">
               <Link
                 href="/"
