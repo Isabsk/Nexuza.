@@ -41,7 +41,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
               }}
             />
           </div>
-          <div className="lg:py-14 mx-auto max-w-3xl py-6 sm:py-10">
+          <div className="mx-auto max-w-3xl py-6 sm:py-10 lg:py-14">
             <div className="sm:mb-8 sm:flex sm:justify-center">
               <div
                 data-aos="fade"
