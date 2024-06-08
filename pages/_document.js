@@ -1,4 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 class MyDocument extends Document {
   render() {
     return (
@@ -23,6 +26,7 @@ class MyDocument extends Document {
             `,
             }}
           />
+          <GoogleTagManager gtmId="GTM-KH2BK3MQ" />
           <script
             type="text/javascript"
             dangerouslySetInnerHTML={{
@@ -118,6 +122,7 @@ class MyDocument extends Document {
           </noscript>
           <Main />
           <NextScript />
+          <GoogleAnalytics gaId="G-THFCERS795" />
         </body>
       </Html>
     )

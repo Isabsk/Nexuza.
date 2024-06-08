@@ -17,6 +17,9 @@ import GAScript from '@/components/analytics/GoogleAnalytics.js'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 
+import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
@@ -32,10 +35,12 @@ export default function App({ Component, pageProps }) {
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <GoogleTagManager gtmId="GTM-KH2BK3MQ" />
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
       <GAScript />
+      <GoogleAnalytics gaId="G-THFCERS795" />
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>
