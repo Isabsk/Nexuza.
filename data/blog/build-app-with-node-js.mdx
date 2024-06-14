@@ -1,0 +1,198 @@
+---
+title: 'Build Your First App With Node.js: Step-By-Step Tutorial'
+date: '2024-06-01'
+tags: ['Node.Js', 'Express.Js', 'Web App']
+thumbnail: 'https://res.cloudinary.com/dyfa5afhe/image/upload/v1718360244/1000120087_io645f.png'
+avatar: '/static/images/avatar.png'
+author: 'Isab Sk'
+draft: false
+summary: 'Step-by-step guide to developing a simple web application using Node.js and Express. Perfect for beginners wanting to learn through a practical sample NodeJS app.'
+---
+
+## **Overview**
+
+<TOCInline toc={props.toc} exclude="Overview" toHeading={3} />
+
+## **Introduction**
+
+By using JavaScript on both the server and client-side, you can get a seamless development experience. A lot of developers like node js for it's scalability and performance also because it's easy to learn.
+
+[Node.js](https://nodejs.org/en) is a very modern and fast technology for building awesome backend for websites. The powerful JavaScript runtime environment of nodejs lets you build scalable and performant web applications.
+
+A huge number of websites (over 280,000 websites as of April 2024) use nodejs as a backend technology. [NodeJs](https://nodejs.org/en) become a powerhouse behind some of the biggest websites today, like Netflix and Paypal.
+
+**Learning Node.js is a good investment for your future.** It equips you with in-demand skills, positions you for working on cutting-edge projects, and opens doors to a supportive and dynamic developer community. That article can help you to get a boost in you dev journey. In that full post I will fully explain you how can create a basic sample node js app, and how can you improve that application.
+
+So let's get started 🚀
+
+## **What is Node.js**
+
+At its core, **Node.js is a [JavaScript runtime environment](https://reintech.io/terms/category/javascript-runtime-environments?page=5)**. That means it's like a software program that can execute JavaScript code outside of a web browser. Traditionally, JavaScript  code has been confined to running within web browsers, allowing for interactivity on web pages. Node.js breaks this barrier by enabling JavaScript to be used for server-side scriptig as well.
+
+**Node.js is very fast beacuse of it's [non-blocking I/O model](https://www.educative.io/answers/what-is-the-event-driven-non-blocking-i-o-model-in-node-js)**. This it not wait for slow operations like database access. Instead, it handles multiple requests concurrently, which improves responsiveness and overall performance of that site.
+
+It's relies on the [**V8 JavaScript engine**](https://v8.dev/) as its core for executing JavaScript code. V8's efficiency and speed are crucial for Node.js's performance.
+
+Node.js have a few advantages over traditional server side languages(like PHP). thy are -
+
+- It's superior for Real-Time apps due to its event-driven architecture and non-blocking I/O.
+- For developers already fimiliar with JavaScript, Node.js provides a smoother learning curve.
+- The Node.js community is large, active and supportive.
+
+## **Install Node.js For Your Platform ( Windows, Mac and Linux )**
+
+At first you need to install node.js in your platform. Installing Node.js gives you access to the tools needed to run a server on your local machine, and then we can make and run the app in our local machine.
+
+Installing Node.js in your platform is a straightforward process that involves a few simle steps. First you need to visit at [nodejs.org](https://nodejs.org/en/download), here you will find the download links for Windows, Mac, and Linux. Choose the version appropriate for your operating system—typically, the LTS (Long Term Support) version is recommended for its reliability and stability. If you have any confusion about the versions and if any other problem arrived during installation that post can navigate you : [How to install Node.js](https://kinsta.com/blog/how-to-install-node-js/).
+
+<div className="relative mb-[10%] w-[100%] pt-[53%]">
+  <Image
+    src="https://res.cloudinary.com/dyfa5afhe/image/upload/v1714393056/Blog%20Pictures/Screenshot_2024-04-29_17.42.52_y9rtjh.png"
+    alt="Node js Download page screenshot"
+    objectFit="cover"
+    layout="fill"
+    className="left-0 top-0 h-full w-full rounded-2xl object-cover"
+  />
+</div>
+
+For Windows and Mac users, downloading the installer and running it will guide you through the setup process. It's generally as simple as clicking 'Next' a few times while making sure to check the box that allows Node.js to be added to your PATH, which makes it accessible from your command line or terminal.
+
+Linux users might prefer using a package manager like **`apt`** for Ubuntu, or **`yum`** for Fedora. For example, on Ubuntu, you would open your terminal and enter commands like
+
+```bash
+sudo apt update
+```
+
+and 
+
+```bash
+sudo apt install nodejs npm
+```
+
+which will install both Node.js and npm (Node Package Manager).
+
+Once the installation is done, you need to verify it by checking versions of node.js and npm packages, for that write these commands in your terminal,
+
+```bash
+node -v
+```
+
+and
+
+```bash
+npm -v
+```
+
+These commands will display the current version of Node.js and npm which are installed on your machine, and that will be confirm that the installation was successful.
+
+## **Setting Up Your Development Environment**
+
+### **Download Visual Studio Code**
+
+Now we need to install a code editor where we will be write our code and build the app. Visual Studio Code (VS Code) is highly recommended for Node.js development due to its robust features, such as built-in Git control, intelligent code completion (IntelliSense), syntax highlighting, and a wide range of extensions specifically designed for Node.js development. So I am using that to write code, but if you prefer any other editor it’s ok.
+
+You can Download and install it from the [official Visual Studio Code site](https://code.visualstudio.com/). To learn more about how to download visual studio code in your platform you can checkout here.
+
+<div className="relative mb-[10%] w-[100%] pt-[53%]">
+  <Image
+    src="https://res.cloudinary.com/dyfa5afhe/image/upload/v1714727868/Blog%20Pictures/pbcls93vpjv7czdho8gl.png"
+    alt="VSCode download page"
+    objectFit="cover"
+    layout="fill"
+    className="left-0 top-0 h-full w-full rounded-2xl object-cover"
+  />
+</div>
+
+## **Your First "Hello World" App in Node.js and Express**
+
+And now you are ready to build your first node js app. We will use express js library to build that nodejs app more accessible and easy to make. So follow the steps carefully and build your first app in nodejs.
+
+### **Step 1: Create a New Directory**
+
+Now in the first step you need to make a directory or a folder where we will write and execute our code, to create your directory you need to open your terminal of your vscode. You will view a simple blank page of vscode after installing it, you need to click at **Terminal >> New Terminal** from top menu bar to open the terminal.
+
+Now you need to run two commands there to create the folder. Here are the following commands:
+
+```bash
+mkdir hello-world
+cd hello-world
+```
+
+Now open that folder in your VSCode.
+
+### **Step 2: Initialize a New Node.js Project**
+
+After running these commands you will have a directory, now you need to initialize your project by running that command:
+
+```bash
+npm init -y
+```
+
+This command creates a **`package.json`** file with default values. The **`package.json`** file is crucial as it holds various metadata relevant to the project, such as dependencies.
+
+### **Step 3: Install Express**
+
+Install Express, which is a fast, unopinionated, minimalist web framework for Node.js. To install Express, run:
+
+```bash
+npm install express
+```
+
+This command adds Express to your project’s dependencies and updates the **`package.json`** file accordingly.
+
+### **Step 4: Create Your Application File**
+
+Create a new file called **`index.js`** in your project directory. You can do this from the terminal or from within your text editor or IDE. In that index.js file we will write our nodejs code.
+
+### **Step 5: Write the Server Code**
+
+Open **`index.js`** and write the following code to set up a basic web server with Express:
+
+```jsx
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+```
+
+Here's what each part does:
+
+- **`require('express')`**: Loads the Express module.
+- **`express()`**: Creates an Express application.
+- **`app.get('/')`**: Defines a route handler for GET requests to the root URL (**`/`**). It sends back a response of "Hello World!".
+- **`app.listen()`**: Starts a server listening on the specified port for connections.
+
+### **Step 6: Run Your Application**
+
+Now the last part where you will run your first node.js app, to run that type the following command in your terminal:
+
+```bash
+node index.js
+```
+
+This command starts the Node.js server. You should see a message in your terminal saying **`Server running on http://localhost:3000`**.
+
+Now visit at http://localhost:3000/ and the output will be look like:
+
+<div className="relative mb-[10%] w-[100%] pt-[53%]">
+  <Image
+    src="https://res.cloudinary.com/dyfa5afhe/image/upload/v1714731855/Blog%20Pictures/Screenshot_2024-05-03_15.53.50_pyqqrn.png"
+    alt="Output of node js app"
+    objectFit="cover"
+    layout="fill"
+    className="left-0 top-0 h-full w-full rounded-2xl object-cover"
+  />
+</div>
+
+Now you can experient with more texts and elements.
+
+## **Conclusion**
+
+Your first "Hello World" app is just the beginning. The world of Node.js is rich with possibilities, offering you the tools to build scalable and efficient web applications. As you progress, remember that learning is a continuous journey. Engage with the community, tackle new projects, and keep challenging yourself. Each line of code you write not only builds your application but also your skill as a developer. Learn from [Nexuza.com](http://Nexuza.com) and embrace the challenges ahead, and enjoy the process of becoming proficient in Node.js. Here's to many more milestones in your development career—happy coding!
