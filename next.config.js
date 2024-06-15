@@ -4,16 +4,16 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; 
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms; 
-  script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarity.ms; 
-  connect-src * data: blob: 'unsafe-inline'; 
-  img-src * data: blob: 'unsafe-inline'; 
-  media-src * data: blob: 'unsafe-inline'; 
-  frame-src * data: blob: ; 
-  style-src * data: blob: 'unsafe-inline'; 
-  font-src * data: blob: 'unsafe-inline'; 
-  frame-ancestors * data: blob: 'unsafe-inline';
+  default-src 'self' data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; 
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://plausible.io giscus.app; 
+  script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarity.ms https://plausible.io; 
+  connect-src 'self' data: blob: 'unsafe-inline'; 
+  img-src 'self' data: blob: 'unsafe-inline' https://www.google.co.in; 
+  media-src 'self' data: blob: 'unsafe-inline'; 
+  frame-src 'self' data: blob: https://embeds.beehiiv.com https://td.doubleclick.net; 
+  style-src 'self' data: blob: 'unsafe-inline' https://fonts.googleapis.com; 
+  font-src 'self' data: blob: 'unsafe-inline'; 
+  frame-ancestors 'self' data: blob: 'unsafe-inline';
 `
 
 module.exports = {
