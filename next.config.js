@@ -4,17 +4,34 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; 
-script-src * data: blob: 'unsafe-inline' 'unsafe-eval'; 
-script-src-elem * data: blob: 'unsafe-inline' 'unsafe-eval';
-connect-src * data: blob: 'unsafe-inline'; 
-img-src * data: blob: 'unsafe-inline'; 
-media-src * data: blob: 'unsafe-inline'; 
-frame-src * data: blob: ; 
-style-src * data: blob: 'unsafe-inline';
-font-src * data: blob: 'unsafe-inline';
-frame-ancestors * data: blob: 'unsafe-inline';
+  default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'; 
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms; 
+  script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://www.clarity.ms; 
+  connect-src * data: blob: 'unsafe-inline'; 
+  img-src * data: blob: 'unsafe-inline'; 
+  media-src * data: blob: 'unsafe-inline'; 
+  frame-src * data: blob: ; 
+  style-src * data: blob: 'unsafe-inline'; 
+  font-src * data: blob: 'unsafe-inline'; 
+  frame-ancestors * data: blob: 'unsafe-inline';
 `
+
+module.exports = {
+  reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: ContentSecurityPolicy.replace(/\n/g, ''),
+          },
+        ],
+      },
+    ]
+  },
+}
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
