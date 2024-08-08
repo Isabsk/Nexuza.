@@ -11,7 +11,7 @@ class MyDocument extends Document {
             httpEquiv="Content-Security-Policy"
             content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com giscus.app; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
           />
-          <meta name="google-adsense-account" content="ca-pub-3585939239731411">
+          <meta name="google-adsense-account" content="ca-pub-3585939239731411" />
           <meta
             httpEquiv="Content-Security-Policy"
             content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms giscus.app; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
