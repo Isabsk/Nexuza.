@@ -68,7 +68,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                 data-aos="fade"
                 data-aos-delay="300"
                 data-aos-duration="1200"
-                className="text-5xl font-extrabold tracking-tight text-gray-900 transition duration-300 dark:text-white sm:text-6xl lg:text-7xl"
+                className="text-4xl font-extrabold tracking-tight text-gray-900 transition duration-300 dark:text-white sm:text-6xl lg:text-7xl"
               >
                 Expand your coding universe with
                 <span
@@ -98,7 +98,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                 <a
                   target="_blank"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSc0iUMeIdI3Uiw8spRsz_JzmM1yiTHZhOfz4fmldj_fDgYYJw/viewform?usp=sf_link"
-                  className="group relative inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 text-xl font-semibold text-indigo-600 shadow-xl"
+                  className="group relative inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 text-[15px] font-semibold text-indigo-600 shadow-xl sm:text-xl"
                 >
                   <span className="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
                   <span className="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
@@ -109,7 +109,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                 </a>
                 <a
                   href="#"
-                  className="text-xl font-semibold leading-6 text-gray-900 dark:text-white"
+                  className="text-[15px] font-semibold leading-6 text-gray-900 dark:text-white sm:text-xl"
                 >
                   <Link href="/blog" aria-label="all posts" legacyBehavior>
                     All Posts -->
@@ -153,7 +153,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
             className="md:w-30 mb-4 mt-1 h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-400 md:h-2"
           ></div>
           <section className="body-font overflow-hidden text-gray-600">
-            <div className="container mx-auto px-5 py-24">
+            <div className="container mx-auto px-5 py-10 sm:py-24">
               <ul className="-m-12 flex flex-wrap">
                 {' '}
                 {!posts.length && 'No posts found.'}{' '}
@@ -172,7 +172,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                     <li
                       data-aos="fade-up"
                       key={slug}
-                      className="flex flex-col items-start p-12 md:w-1/2"
+                      className="flex flex-col items-start px-12 py-8 sm:py-12 md:w-1/2"
                     >
                       <div className="relative mb-5 w-full rounded-2xl bg-gray-200 pt-[60%] drop-shadow-md">
                         <Image
@@ -197,24 +197,24 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                         {summary}
                       </p>
                       <div className=" mt-auto flex w-full flex-wrap items-center border-gray-100">
-                        <span className="group mt-6 inline-flex h-9 items-center whitespace-nowrap rounded-full bg-slate-200 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600 dark:hover:text-slate-100">
-                          <Link href={`/blog/${slug}`} legacyBehavior>
+                        <Link href={`/blog/${slug}`} legacyBehavior>
+                          <span className="group mt-6 inline-flex h-9 items-center whitespace-nowrap rounded-full bg-slate-200 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-300 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600 dark:hover:text-slate-100">
                             Learn More
-                          </Link>
-                          <svg
-                            className="ml-3 overflow-visible text-slate-500 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-200"
-                            width="3"
-                            height="6"
-                            viewBox="0 0 3 6"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <path d="M0 0L3 3L0 6"></path>
-                          </svg>
-                        </span>
+                            <svg
+                              className="ml-3 overflow-visible text-slate-500 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-200"
+                              width="3"
+                              height="6"
+                              viewBox="0 0 3 6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path d="M0 0L3 3L0 6"></path>
+                            </svg>
+                          </span>
+                        </Link>
                       </div>
                     </li>
                   )

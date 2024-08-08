@@ -56,7 +56,7 @@ const LayoutWrapper = ({ children }) => {
               <a
                 target="_blank"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc0iUMeIdI3Uiw8spRsz_JzmM1yiTHZhOfz4fmldj_fDgYYJw/viewform?usp=sf_link"
-                className="text-md group relative ml-4 inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 font-semibold text-indigo-600 shadow-xl"
+                className="sm:text-md group relative ml-4 inline-block inline-flex items-center justify-center overflow-hidden rounded-lg p-4 px-6 py-3 text-[15px] font-semibold text-indigo-600 shadow-xl"
               >
                 <span className="ease absolute left-0 top-0 -ml-3 -mt-10 h-40 w-60 rounded-full bg-blue-500 blur-md transition-all duration-700"></span>
                 <span className="ease absolute inset-0 h-full w-full transition duration-700 group-hover:rotate-180">
