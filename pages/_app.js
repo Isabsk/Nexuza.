@@ -6,6 +6,7 @@ import '@fontsource/inter/variable-full.css'
 
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
+import Script from 'next/script'
 
 import { React, useEffect } from 'react'
 import AOS from 'aos'
@@ -36,6 +37,18 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <GoogleTagManager gtmId="GTM-KH2BK3MQ" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=GTM-KH2BK3MQ`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-KH2BK3MQ');
+  `}
+        </Script>
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
