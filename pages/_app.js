@@ -37,6 +37,15 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <GoogleTagManager gtmId="GTM-KH2BK3MQ" />
+        <Script id="clarity-script" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "mmzmim8tix");
+          `}
+        </Script>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=GTM-KH2BK3MQ`}
           strategy="afterInteractive"
