@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GoogleTagManager } from '@next/third-parties/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 class MyDocument extends Document {
@@ -18,30 +17,6 @@ class MyDocument extends Document {
           <meta
             httpEquiv="Content-Security-Policy"
             content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms giscus.app; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-KH2BK3MQ');
-            `,
-            }}
-          />
-          <GoogleTagManager gtmId="GTM-KH2BK3MQ" />
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window, document, "clarity", "script", "mmzmim8tix");
-              `,
-            }}
           />
           <link
             rel="apple-touch-icon"
@@ -95,39 +70,15 @@ class MyDocument extends Document {
             content="#082f49"
           />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-THFCERS795"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'G-THFCERS795');
-              `,
-            }}
-          />
         </Head>
         <body
           style={{ overflowX: 'hidden' }}
           className="!overflow-x-hidden !overflow-y-visible bg-white text-black antialiased dark:bg-gray-900 dark:text-white"
         >
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-KH2BK3MQ"
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            ></iframe>
-          </noscript>
           <Main />
           <NextScript />
-          <GoogleAnalytics gaId="G-THFCERS795" />
         </body>
+        <GoogleAnalytics gaId="G-THFCERS795" />
       </Html>
     )
   }
