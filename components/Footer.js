@@ -11,7 +11,7 @@ export default function Footer() {
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
-          <Link href="/">ImagiWeb.</Link>
+          <Link href="/">Nexuza.</Link>
         </div>
         <div className="mb-8 text-sm text-white dark:text-white">
           <Link
