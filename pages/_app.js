@@ -35,17 +35,16 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   return (
-    <PlausibleProvider domain="nexuza.com">
-      <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-        <Head>
-          <meta content="width=device-width, initial-scale=1" name="viewport" />
-        </Head>
-        {isDevelopment && isSocket && <ClientReload />}
-        <GoogleAnalytics gaId="G-THFCERS795" />
-        <LayoutWrapper>
-          <Component {...pageProps} />
-        </LayoutWrapper>
-      </ThemeProvider>
-    </PlausibleProvider>
+    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+      <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <PlausibleProvider domain="nexuza.com" />
+      </Head>
+      {isDevelopment && isSocket && <ClientReload />}
+      <GoogleAnalytics gaId="G-THFCERS795" />
+      <LayoutWrapper>
+        <Component {...pageProps} />
+      </LayoutWrapper>
+    </ThemeProvider>
   )
 }
