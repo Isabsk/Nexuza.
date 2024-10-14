@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
 
 class MyDocument extends Document {
   render() {
