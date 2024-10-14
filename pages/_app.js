@@ -8,6 +8,8 @@ import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 import Script from 'next/script'
 
+import PlausibleProvider from 'next-plausible'
+
 import { React, useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -33,20 +35,17 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   return (
-    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-      <Head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <script
-          defer
-          data-domain="nexuza.com"
-          src="https://plausible.io/js/script.js"
-        ></script>
-      </Head>
-      {isDevelopment && isSocket && <ClientReload />}
-      <GoogleAnalytics gaId="G-THFCERS795" />
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
-    </ThemeProvider>
+    <PlausibleProvider domain="nexuza.com">
+      <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+        <Head>
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
+        </Head>
+        {isDevelopment && isSocket && <ClientReload />}
+        <GoogleAnalytics gaId="G-THFCERS795" />
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
+      </ThemeProvider>
+    </PlausibleProvider>
   )
 }
