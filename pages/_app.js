@@ -15,13 +15,8 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import siteMetadata from '@/data/siteMetadata'
-import Analytics from '@/components/analytics'
-import GAScript from '@/components/analytics/GoogleAnalytics.js'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
-
-import { GoogleTagManager } from '@next/third-parties/google'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -41,7 +36,6 @@ export default function App({ Component, pageProps }) {
         <PlausibleProvider domain="nexuza.com" />
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
-      <GoogleAnalytics gaId="G-THFCERS795" />
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>

@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
 
 class MyDocument extends Document {
@@ -8,16 +7,8 @@ class MyDocument extends Document {
       <Html lang="en" className="scroll-smooth">
         <Head>
           <meta
-            httpEquiv="Content-Security-Policy"
-            content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com giscus.app; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
-          />
-          <meta
             name="google-adsense-account"
             content="ca-pub-3585939239731411"
-          />
-          <meta
-            httpEquiv="Content-Security-Policy"
-            content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms giscus.app; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
           />
           <link
             rel="apple-touch-icon"
@@ -48,19 +39,6 @@ class MyDocument extends Document {
             media="(prefers-color-scheme: light)"
             content="#0ea5e9"
           />
-          <meta
-            http-equiv="Content-Security-Policy"
-            content="frame-src 'self' https://embeds.beehiiv.com/"
-          />
-          <meta
-            httpEquiv="Content-Security-Policy"
-            content="
-              default-src 'self';
-              script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app https://www.googletagmanager.com https://plausible.io;
-              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-              font-src 'self' https://fonts.gstatic.com;
-            "
-          />
           <link
             href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
@@ -78,18 +56,7 @@ class MyDocument extends Document {
         >
           <Main />
           <NextScript />
-          <Script id="clarity-script" strategy="afterInteractive">
-            {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "mmzmim8tix");
-          `}
-          </Script>
         </body>
-
-        <GoogleAnalytics gaId="G-THFCERS795" />
       </Html>
     )
   }
