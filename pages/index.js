@@ -174,7 +174,7 @@ export default function Home({ posts, authauthorDetailsorDetails }) {
                       key={slug}
                       className="flex flex-col items-start px-12 py-8 sm:py-12 md:w-1/2"
                     >
-                      <div className="relative mb-5 w-full rounded-2xl bg-gray-200 pt-[60%] drop-shadow-md">
+                      <div className="relative mb-5 w-full rounded-2xl bg-gray-200 pt-[57%] drop-shadow-md">
                         <Image
                           src={thumbnail}
                           alt="profile"
