@@ -1,0 +1,212 @@
+---
+title: 'What is JSX in React? - Explained'
+date: '2024-11-11'
+tags: ['react', 'jsx', 'blog']
+thumbnail: 'https://res.cloudinary.com/dyfa5afhe/image/upload/v1732248297/Blog%20Headers/what-is-jsx-and-react-js.png'
+avatar: '/static/images/avatar.png'
+author: 'Isab Sk'
+draft: false
+summary: JSX in React is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript, making UI creation easier.
+---
+
+## **Overview**
+
+<TOCInline toc={props.toc} exclude="Overview" toHeading={3} />
+
+## **Introduction to JSX**
+
+What is [JSX](https://www.geeksforgeeks.org/reactjs-jsx-introduction/)? JSX stands for JavaScript XML, a syntax extension that allows you to write HTML-like code within JavaScript. It is used in React to describe how the UI should look. 
+
+Essentially, JSX makes it easier to create React components by combining JavaScript and HTML in a simple, readable format.
+
+So, what is [JSX in React](https://legacy.reactjs.org/docs/introducing-jsx.html)? It allows developers to use HTML tags directly inside JavaScript code. JSX is not mandatory in React, but it simplifies the process of building and rendering UI components. 
+
+When JSX code is written, it gets transformed into regular JavaScript functions, making it compatible with React.
+
+With JSX, you can write dynamic content by embedding JavaScript expressions inside curly braces {}. This makes JSX a powerful tool for building interactive and reusable user interfaces in React.
+
+## **Why Use JSX?**
+
+[JSX](https://www.w3schools.com/react/react_jsx.asp) is a key feature in React that makes development easier and more efficient. Here's why we use JSX in React:
+
+1.  **Cleaner and More Readable Code:**\
+    JSX allows you to write HTML-like code within JavaScript, making the structure of your components much more understandable. It combines both the markup and logic in one place, making your code easier to read and maintain.
+
+2.  **Simplifies Component Creation:**\
+    By using JSX, you can quickly create and structure UI components without needing to rely on separate HTML files or complex JavaScript code. It allows you to directly define the look of your user interface while embedding JavaScript logic where needed.
+
+3.  **Faster Development:**\
+    With JSX, you don't need to write extra lines of code to create elements or manually manipulate the DOM. It makes building components faster, saving you time and effort during development.
+
+4.  **Integrates Easily with React:**\
+    JSX is designed to work seamlessly with React. It lets you use JavaScript expressions in your markup, enabling dynamic content generation. This means you can build interactive UIs without extra setup or complexity.
+
+5.  **Declarative Nature:**\
+    JSX makes your UI code more declarative, meaning you describe what the UI should look like, and React takes care of updating it when necessary. This removes the need to directly manage the DOM, simplifying the development process.
+
+[JSX in React](https://www.freecodecamp.org/news/jsx-in-react-introduction/) simplifies UI development, improves code readability, and makes it easier to manage dynamic content and interactions, which is why it's widely used in React development.
+
+***You Should Also Read: [Build Your First Simple Nodejs App: Step-By-Step Tutorial](https://nexuza.com/blog/build-app-with-node-js)***
+
+## **JSX Syntax and Rules**
+
+Here we'll go over everything you need to know about JSX syntax and rules. JSX is the syntax extension for JavaScript used in React to write HTML-like code inside JavaScript. Let's explore the important rules and how to use them.
+
+### **1\. How to Write JSX?**
+
+JSX allows you to write HTML-like code inside JavaScript. You can write tags like HTML elements directly within your JavaScript code. To use JSX, you simply place it inside your React components. JSX looks like HTML but works in JavaScript.
+
+**Example:**
+```jsx
+const element = <h1>Hello, World!</h1>;
+```
+In this example, the `<h1>` tag is JSX that gets converted into JavaScript by React.
+
+### **2\. Expressions in JSX**
+
+JSX allows you to embed JavaScript expressions inside curly braces {}. Any valid JavaScript expression can be used here, including variables, functions, and mathematical operations.
+
+**Example:**
+```jsx
+const name = "Adam";
+
+const greeting = <h1>Hello, {name}!</h1>;
+```
+Here, the variable `name` is embedded inside the JSX, making it dynamic.
+
+### **3\. Inserting a Large Block of HTML**
+
+JSX can handle large blocks of HTML. However, you need to ensure everything is properly wrapped in a single parent element. This is crucial for JSX syntax.
+
+**Example:**
+```jsx
+const element = (
+
+  <div>
+
+    <h1>Welcome to React!</h1>
+
+    <p>This is a simple guide on JSX syntax and rules.</p>
+
+  </div>
+
+);
+```
+In this case, both the `<h1>` and `<p>` tags are wrapped in a `<div>`, which is required in JSX.
+
+### **4\. Elements Must Be Closed**
+
+In JSX, every element must be closed properly. Unlike HTML where some tags can be left open, JSX requires that tags either be closed explicitly or self-closed if they don't have children.
+
+**Example:**
+```jsx
+// Correct
+
+const image = <img src="image.jpg" alt="Description" />;
+
+// Incorrect (will cause an error)
+
+const image = <img src="image.jpg" alt="Description">
+```
+Self-closing tags like `<img />`, `<input />`, and `<br />` must have the slash at the end.
+
+### **5\. Attribute class = className**
+
+In HTML, you use `class` to apply styles to an element. However, in JSX, `class` is a reserved word in JavaScript. So, you use `className` instead to define CSS classes for elements.
+
+**Example:**
+```jsx
+const element = <div className="container">Content here</div>;
+```
+Here, `className` is used instead of `class`.
+
+### **6\. Conditions - if Statements**
+
+JSX doesn't directly support `if` statements. Instead, you can use ternary operators or logical `&&` operators to implement conditional rendering.
+
+**Using Ternary Operator:**
+```jsx
+const isLoggedIn = true;
+
+const element = <h1>{isLoggedIn ? 'Welcome back!' : 'Please log in.'}</h1>;
+```
+**Using Logical AND (`&&`) Operator:**
+```jsx
+const showMessage = true;
+
+const element = <div>{showMessage && <p>You have new notifications!</p>}</div>;
+```
+The ternary operator is useful when you have two conditions, while the `&&` operator is great for conditionally rendering content.
+
+### **7\. Styling in JSX**
+
+In JSX, you can apply styles in two ways: using inline styles or applying CSS classes.
+
+**Inline Styles:** You pass a JavaScript object with camelCase property names.
+
+**Example:**
+```jsx
+const style = { color: 'blue', fontSize: '20px' };
+
+const element = <h1 style={style}>Styled Text</h1>;
+```
+Here, the `style` attribute takes an object with camelCase properties like `color` and `fontSize`.
+
+**CSS Classes:** Use className to apply external CSS styles.
+
+**Example:**
+```jsx
+const element = <div className="container">Content here</div>;
+```
+### **JSX Syntax and Rules Recap**
+
+-   **Wrap Elements in One Parent:** Always wrap your JSX content in a single parent element, like a `<div>` or a fragment.
+
+-   **Closing Tags:** All elements must be properly closed, including self-closing tags like `<img />`, `<input />`, etc.
+
+-   **JavaScript Expressions:** You can use JavaScript expressions inside curly braces `{}`.
+
+-   **ClassName:** Use `className` instead of `class` for defining CSS classes in JSX.
+
+-   **Conditional Rendering:** Use ternary operators or `&&` for conditional rendering in JSX.
+
+-   **Styling:** Use inline styles with JavaScript objects or apply external styles using `className`.
+
+By understanding and following these JSX syntax rules, you can effectively use JSX in React to build dynamic, interactive UIs. JSX simplifies React development by making the code more readable, maintainable, and expressive.
+
+***You Should Also Read: [Top 10 Best Books For Web Development [ 2025 ]](https://nexuza.com/blog/best-books-for-web-development)***
+
+## **JSX Cheatsheet**
+
+For a quick reference and additional information on JSX, you can check out this helpful JSX Cheatsheet. 
+
+It provides a concise summary of JSX syntax and rules, covering common patterns and best practices in React development. 
+
+Whether you're just starting with JSX or looking to refresh your knowledge, this cheatsheet can be a valuable resource.
+
+You can access the cheatsheet for further learning here:\
+[JSX Cheatsheet on Codecademy](https://www.codecademy.com/learn/react-101/modules/react-101-jsx-u/cheatsheet)
+
+This guide includes key topics like:
+
+-   JSX syntax and rules
+
+-   Common JSX patterns
+
+-   Handling attributes and styling in JSX
+
+-   Conditional rendering
+
+-   And more!
+
+Feel free to use this cheatsheet to streamline your understanding of JSX and enhance your React development skills.
+
+## **Conclusion**
+
+JSX is an essential part of React, simplifying the process of building and managing dynamic user interfaces. It bridges the gap between HTML and JavaScript, allowing developers to write clean, readable, and maintainable code. 
+
+By understanding the syntax and rules of JSX, you can effectively create components, handle conditional rendering, and style elements with ease.
+
+If you're looking to deepen your understanding, don't forget to check out the[  ](https://www.codecademy.com/learn/react-101/modules/react-101-jsx-u/cheatsheet)[Nexuza Blogs](https://nexuza.com/blog) for a quick reference and best practices.
+
+Mastering JSX not only improves your React skills but also sets the foundation for developing robust, efficient, and interactive web applications. Happy coding!
